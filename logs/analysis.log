@@ -1,12 +1,12 @@
-2026-01-30 23:58:14,244 - __main__ - INFO - Section 1 logging setup, imported libraries, & global variables
+2026-01-31 13:33:12,048 - __main__ - INFO - Section 1 logging setup, imported libraries, & global variables
 
-2026-01-30 23:58:14,280 - __main__ - INFO - 
+2026-01-31 13:33:12,092 - __main__ - INFO - 
 
 SECTION 2: LOAD & EXPLORE DATA
 
-2026-01-30 23:58:14,404 - __main__ - INFO - Successfully loaded DataFrame with shape: (107251, 15)
-2026-01-30 23:58:14,405 - __main__ - INFO - Sample rows of the DataFrame:
-2026-01-30 23:58:14,411 - __main__ - INFO - 
+2026-01-31 13:33:12,188 - __main__ - INFO - Successfully loaded DataFrame with shape: (107251, 15)
+2026-01-31 13:33:12,188 - __main__ - INFO - Sample rows of the DataFrame:
+2026-01-31 13:33:12,190 - __main__ - INFO - 
 |    | StartTime                  |     Dur | Proto   | SrcAddr       |   Sport | Dir   | DstAddr       |   Dport | State   |   sTos |   dTos |   TotPkts |   TotBytes |   SrcBytes | Label                           |
 |---:|:---------------------------|--------:|:--------|:--------------|--------:|:------|:--------------|--------:|:--------|-------:|-------:|----------:|-----------:|-----------:|:--------------------------------|
 |  0 | 2011/08/18 15:40:53.826372 | 2.98325 | tcp     | 76.76.172.248 |   63577 | ->    | 147.32.84.229 |   13363 | SR_SA   |      0 |      0 |         3 |        184 |        122 | flow=Background-TCP-Established |
@@ -15,39 +15,39 @@ SECTION 2: LOAD & EXPLORE DATA
 |  3 | 2011/08/18 15:40:56.809619 | 6.01623 | tcp     | 76.76.172.248 |   63577 | ->    | 147.32.84.229 |   13363 | SR_SA   |      0 |      0 |         3 |        184 |        122 | flow=Background-TCP-Established |
 |  4 | 2011/08/18 15:40:58.341523 | 6.12472 | tcp     | 76.76.172.248 |   63580 | ->    | 147.32.84.229 |     443 | SR_SA   |      0 |      0 |         3 |        184 |        122 | flow=Background-TCP-Established |
 
-2026-01-30 23:58:14,411 - __main__ - INFO - Data types:
-2026-01-30 23:58:14,427 - __main__ - INFO - 
-<class 'pandas.core.frame.DataFrame'>
+2026-01-31 13:33:12,190 - __main__ - INFO - Data types:
+2026-01-31 13:33:12,205 - __main__ - INFO - 
+<class 'pandas.DataFrame'>
 RangeIndex: 107251 entries, 0 to 107250
 Data columns (total 15 columns):
  #   Column     Non-Null Count   Dtype  
 ---  ------     --------------   -----  
- 0   StartTime  107251 non-null  object 
+ 0   StartTime  107251 non-null  str    
  1   Dur        107251 non-null  float64
- 2   Proto      107251 non-null  object 
- 3   SrcAddr    107251 non-null  object 
- 4   Sport      106788 non-null  object 
- 5   Dir        107251 non-null  object 
- 6   DstAddr    107251 non-null  object 
- 7   Dport      99351 non-null   object 
- 8   State      107160 non-null  object 
+ 2   Proto      107251 non-null  str    
+ 3   SrcAddr    107251 non-null  str    
+ 4   Sport      106788 non-null  str    
+ 5   Dir        107251 non-null  str    
+ 6   DstAddr    107251 non-null  str    
+ 7   Dport      99351 non-null   str    
+ 8   State      107160 non-null  str    
  9   sTos       106271 non-null  float64
  10  dTos       90292 non-null   float64
  11  TotPkts    107251 non-null  int64  
  12  TotBytes   107251 non-null  int64  
  13  SrcBytes   107251 non-null  int64  
- 14  Label      107251 non-null  object 
-dtypes: float64(3), int64(3), object(9)
-memory usage: 12.3+ MB
+ 14  Label      107251 non-null  str    
+dtypes: float64(3), int64(3), str(9)
+memory usage: 12.3 MB
 
 
-2026-01-30 23:58:14,428 - __main__ - INFO - Grouping 'Label' into Background, Botnet, or Normal...
+2026-01-31 13:33:12,206 - __main__ - INFO - Grouping 'Label' into Background, Botnet, or Normal...
 
-2026-01-30 23:58:14,439 - __main__ - INFO - Distribution of LabelGroup: {'Background': 96369, 'Botnet': 8164, 'Normal': 2718}
-2026-01-30 23:58:14,789 - __main__ - INFO - S2 - Combined bar/pie chart saved to plots/S2_target_distribution_combined.png
-2026-01-30 23:58:14,847 - __main__ - INFO - Checking for missing values & describing basic stats...
+2026-01-31 13:33:12,222 - __main__ - INFO - Distribution of LabelGroup: {'Background': 96369, 'Botnet': 8164, 'Normal': 2718}
+2026-01-31 13:33:12,750 - __main__ - INFO - S2 - Combined bar/pie chart saved to plots/S2_target_distribution_combined.png
+2026-01-31 13:33:12,777 - __main__ - INFO - Checking for missing values & describing basic stats...
 
-2026-01-30 23:58:14,860 - __main__ - INFO - Missing values per column:
+2026-01-31 13:33:12,792 - __main__ - INFO - Missing values per column:
 
 |            |     0 |
 |:-----------|------:|
@@ -68,9 +68,9 @@ memory usage: 12.3+ MB
 | Label      |     0 |
 | LabelGroup |     0 |
 
-2026-01-30 23:58:14,860 - __main__ - INFO - Explanation: Some columns (Sport, Dport, sTos, dTos, State) may be missing if not recorded.
+2026-01-31 13:33:12,792 - __main__ - INFO - Explanation: Some columns (Sport, Dport, sTos, dTos, State) may be missing if not recorded.
 
-2026-01-30 23:58:14,931 - __main__ - INFO - Basic statistics of all columns:
+2026-01-31 13:33:12,884 - __main__ - INFO - Basic statistics of all columns:
 
 |        | StartTime                  |           Dur | Proto   | SrcAddr       |   Sport | Dir    | DstAddr     |   Dport | State   |           sTos |           dTos |     TotPkts |         TotBytes |         SrcBytes | Label                           | LabelGroup   |
 |:-------|:---------------------------|--------------:|:--------|:--------------|--------:|:-------|:------------|--------:|:--------|---------------:|---------------:|------------:|-----------------:|-----------------:|:--------------------------------|:-------------|
@@ -86,33 +86,33 @@ memory usage: 12.3+ MB
 | 75%    | nan                        |      0.348301 | nan     | nan           |     nan | nan    | nan         |     nan | nan     |      0         |     0          |      4      |   1066           |    530           | nan                             | nan          |
 | max    | nan                        |    971.288    | nan     | nan           |     nan | nan    | nan         |     nan | nan     |    192         |     3          | 498932      |      5.03831e+08 |      2.28729e+07 | nan                             | nan          |
 
-2026-01-30 23:58:14,931 - __main__ - INFO - Creating top 20 Source IP Chart, Scaled (All Traffic)
+2026-01-31 13:33:12,884 - __main__ - INFO - Creating top 20 Source IP Chart, Scaled (All Traffic)
 
-2026-01-30 23:58:15,365 - __main__ - INFO - S2 - Top 20 source IP chart (All Traffic) saved to plots/S2_top_20_src_ips_all_scaled.png
-2026-01-30 23:58:15,460 - __main__ - INFO - Top 20 Source IP distribution counts: {'Background': 51525, 'Botnet': 8157, 'Normal': 2115}
-2026-01-30 23:58:15,463 - __main__ - INFO - Creating top 20 Source IP Chart, Scaled (Normal + Botnet Traffic)
+2026-01-31 13:33:13,103 - __main__ - INFO - S2 - Top 20 source IP chart (All Traffic) saved to plots/S2_top_20_src_ips_all_scaled.png
+2026-01-31 13:33:13,158 - __main__ - INFO - Top 20 Source IP distribution counts: {'Background': 51525, 'Botnet': 8157, 'Normal': 2115}
+2026-01-31 13:33:13,162 - __main__ - INFO - Creating top 20 Source IP Chart, Scaled (Normal + Botnet Traffic)
 
-2026-01-30 23:58:15,808 - __main__ - INFO - S2 - Top 20 source IP chart (Botnet+Normal) saved to plots/S2_top_20_src_ips_botnet_normal_scaled.png
-2026-01-30 23:58:15,896 - __main__ - INFO - Creating Top 20 Destination IP Chart, Scaled (All Traffic)
+2026-01-31 13:33:13,317 - __main__ - INFO - S2 - Top 20 source IP chart (Botnet+Normal) saved to plots/S2_top_20_src_ips_botnet_normal_scaled.png
+2026-01-31 13:33:13,367 - __main__ - INFO - Creating Top 20 Destination IP Chart, Scaled (All Traffic)
 
-2026-01-30 23:58:16,323 - __main__ - INFO - S2 - Top 20 destination IP chart (All Traffic) saved to plots/S2_top_20_dst_ips_all_scaled.png
-2026-01-30 23:58:16,420 - __main__ - INFO - Top 20 Destination IP distribution counts: {'Background': 65740, 'Botnet': 8155, 'Normal': 2498}
-2026-01-30 23:58:16,423 - __main__ - INFO - Creating Top 20 Destination IP Chart, Scaled (Normal + Botnet Traffic)
+2026-01-31 13:33:13,602 - __main__ - INFO - S2 - Top 20 destination IP chart (All Traffic) saved to plots/S2_top_20_dst_ips_all_scaled.png
+2026-01-31 13:33:13,658 - __main__ - INFO - Top 20 Destination IP distribution counts: {'Background': 65740, 'Botnet': 8155, 'Normal': 2498}
+2026-01-31 13:33:13,661 - __main__ - INFO - Creating Top 20 Destination IP Chart, Scaled (Normal + Botnet Traffic)
 
-2026-01-30 23:58:16,785 - __main__ - INFO - S2 - Top 20 destination IP chart (Botnet+Normal) saved to plots/S2_top_20_dst_ips_botnet_normal_scaled.png
-2026-01-30 23:58:16,892 - __main__ - INFO - Plotting time-based packets (All Traffic)...
+2026-01-31 13:33:13,817 - __main__ - INFO - S2 - Top 20 destination IP chart (Botnet+Normal) saved to plots/S2_top_20_dst_ips_botnet_normal_scaled.png
+2026-01-31 13:33:13,872 - __main__ - INFO - Plotting time-based packets (All Traffic)...
 
-2026-01-30 23:58:16,905 - __main__ - INFO - Earliest timestamp: 2011-08-18 15:39:35.087798
+2026-01-31 13:33:13,884 - __main__ - INFO - Earliest timestamp: 2011-08-18 15:39:35.087798
 Latest timestamp: 2011-08-18 15:55:46.379941
 Total capture duration: 0 days 00:16:11.292143
 
-2026-01-30 23:58:17,308 - __main__ - INFO - S2 - Time-based packets (All Traffic) saved to plots/S2_time_based_totpkts_all_scaled.png
-2026-01-30 23:58:17,401 - __main__ - INFO - Time-based packet stats (sum per minute): {'count': 17.0, 'mean': 258509.5294117647, 'std': 474000.87732937234, 'min': 23881.0, '25%': 68433.0, '50%': 87869.0, '75%': 159754.0, 'max': 1885782.0}
-2026-01-30 23:58:17,402 - __main__ - INFO - Creating time-based average duration chart, scaled (All Traffic)...
+2026-01-31 13:33:14,075 - __main__ - INFO - S2 - Time-based packets (All Traffic) saved to plots/S2_time_based_totpkts_all_scaled.png
+2026-01-31 13:33:14,134 - __main__ - INFO - Time-based packet stats (sum per minute): {'count': 17.0, 'mean': 258509.5294117647, 'std': 474000.87732937234, 'min': 23881.0, '25%': 68433.0, '50%': 87869.0, '75%': 159754.0, 'max': 1885782.0}
+2026-01-31 13:33:14,134 - __main__ - INFO - Creating time-based average duration chart, scaled (All Traffic)...
 
-2026-01-30 23:58:17,758 - __main__ - INFO - S2 - Time-based average Dur (All Traffic) saved to plots/S2_time_based_avg_dur_all_scaled.png
-2026-01-30 23:58:17,835 - __main__ - INFO - Time-based average duration stats (mean per minute): {'count': 51.0, 'mean': 37.904090179296055, 'std': 79.84021259408507, 'min': 0.0, '25%': 0.0009210759717314487, '50%': 9.488129102349971, '75%': 24.07293478125, 'max': 454.9645861666667}
-2026-01-30 23:58:17,847 - __main__ - INFO - 
+2026-01-31 13:33:14,289 - __main__ - INFO - S2 - Time-based average Dur (All Traffic) saved to plots/S2_time_based_avg_dur_all_scaled.png
+2026-01-31 13:33:14,332 - __main__ - INFO - Time-based average duration stats (mean per minute): {'count': 51.0, 'mean': 37.904090179296055, 'std': 79.84021259408507, 'min': 0.0, '25%': 0.0009210759717314487, '50%': 9.488129102349971, '75%': 24.07293478125, 'max': 454.9645861666667}
+2026-01-31 13:33:14,344 - __main__ - INFO - 
 | Category  | Metric                                                    |                                          Value |
 |:--------- |:--------------------------------------------------------- |----------------------------------------------:|
 | Botnet    | Number of unique Botnet source IPs                        | 3                          |
@@ -126,21 +126,21 @@ Total capture duration: 0 days 00:16:11.292143
 | Botnet    | Botnet Duration (seconds) [min, mean, max]                | [0.00, 7.86, 416.85] |
 | Normal    | Normal Duration (seconds) [min, mean, max]                | [0.00, 7.88, 969.98] |
 
-2026-01-30 23:58:17,847 - __main__ - INFO - 
+2026-01-31 13:33:14,344 - __main__ - INFO - 
 Creating a Botnet Source→Target Destination Graph
 
-2026-01-30 23:58:18,341 - __main__ - INFO - 
+2026-01-31 13:33:14,501 - __main__ - INFO - 
 plots/S2_botnet_src_dist_plot.png
 
-2026-01-30 23:58:18,434 - __main__ - INFO - 
+2026-01-31 13:33:14,546 - __main__ - INFO - 
 
 SECTION 3 (Enhanced): BASIC DATA CLEANING & FEATURE ENGINEERING
 
-2026-01-30 23:58:18,558 - __main__ - INFO - Created DurCategory feature. Distribution: {'very_short': 10106, 'long': 755, 'medium': 13, 'short': 8}
-2026-01-30 23:58:18,598 - __main__ - INFO - Created BytePktRatio feature. Basic stats: {'count': 10882.0, 'mean': 822.1099264102124, 'std': 421.4506072744979, 'min': 60.0, '25%': 292.0, '50%': 1066.0, '75%': 1066.0, 'max': 1066.0}
-2026-01-30 23:58:18,599 - __main__ - INFO - Enhanced Feature matrix shape: (10882, 17), Target vector shape: (10882,)
-2026-01-30 23:58:18,602 - __main__ - INFO - Showing the first few rows of the enhanced DataFrame:
-2026-01-30 23:58:18,603 - __main__ - INFO - 
+2026-01-31 13:33:14,651 - __main__ - INFO - Created DurCategory feature. Distribution: {'very_short': 10106, 'long': 755, 'medium': 13, 'short': 8}
+2026-01-31 13:33:14,679 - __main__ - INFO - Created BytePktRatio feature. Basic stats: {'count': 10882.0, 'mean': 822.1099264102124, 'std': 421.45060727449794, 'min': 60.0, '25%': 292.0, '50%': 1066.0, '75%': 1066.0, 'max': 1066.0}
+2026-01-31 13:33:14,680 - __main__ - INFO - Enhanced Feature matrix shape: (10882, 17), Target vector shape: (10882,)
+2026-01-31 13:33:14,680 - __main__ - INFO - Showing the first few rows of the enhanced DataFrame:
+2026-01-31 13:33:14,681 - __main__ - INFO - 
 
 |     |     Dur | Proto   | Dir   | State   | SrcAddr       | DstAddr        | SportRange   | DportRange   |   TotPkts |   TotBytes |   SrcBytes |   BytesPerSecond |   PktsPerSecond |   BytePktRatio |   SrcAddrEntropy |   DstAddrEntropy | DurCategory   |   Botnet |
 |----:|--------:|:--------|:------|:--------|:--------------|:---------------|:-------------|:-------------|----------:|-----------:|-----------:|-----------------:|----------------:|---------------:|-----------------:|-----------------:|:--------------|---------:|
@@ -150,21 +150,21 @@ SECTION 3 (Enhanced): BASIC DATA CLEANING & FEATURE ENGINEERING
 | 568 | 265.885 | tcp     | <?>   | PA_RA   | 147.32.84.134 | 205.188.17.129 | Ephemeral    | WellKnown    |        17 |       1020 |        480 |          3.83625 |       0.0639375 |        60      |          2.66123 |          2.84237 | long          |        0 |
 | 569 | 960.5   | tcp     | <?>   | PA_A    | 147.32.84.134 | 64.12.73.133   | Ephemeral    | WellKnown    |        62 |       3720 |       1860 |          3.87298 |       0.0645497 |        60      |          2.66123 |          2.62581 | long          |        0 |
 
-2026-01-30 23:58:18,605 - __main__ - INFO - 
+2026-01-31 13:33:14,684 - __main__ - INFO - 
 
-<class 'pandas.core.frame.DataFrame'>
+<class 'pandas.DataFrame'>
 Index: 10882 entries, 40 to 106683
 Data columns (total 18 columns):
  #   Column          Non-Null Count  Dtype   
 ---  ------          --------------  -----   
  0   Dur             10882 non-null  float64 
- 1   Proto           10882 non-null  object  
- 2   Dir             10882 non-null  object  
- 3   State           10791 non-null  object  
- 4   SrcAddr         10882 non-null  object  
- 5   DstAddr         10882 non-null  object  
- 6   SportRange      10882 non-null  object  
- 7   DportRange      10882 non-null  object  
+ 1   Proto           10882 non-null  str     
+ 2   Dir             10882 non-null  str     
+ 3   State           10791 non-null  str     
+ 4   SrcAddr         10882 non-null  str     
+ 5   DstAddr         10882 non-null  str     
+ 6   SportRange      10882 non-null  str     
+ 7   DportRange      10882 non-null  str     
  8   TotPkts         10882 non-null  int64   
  9   TotBytes        10882 non-null  int64   
  10  SrcBytes        10882 non-null  int64   
@@ -175,14 +175,14 @@ Data columns (total 18 columns):
  15  DstAddrEntropy  10882 non-null  float64 
  16  DurCategory     10882 non-null  category
  17  Botnet          10882 non-null  int64   
-dtypes: category(1), float64(6), int64(4), object(7)
-memory usage: 1.5+ MB
+dtypes: category(1), float64(6), int64(4), str(7)
+memory usage: 1.5 MB
 
 
-2026-01-30 23:58:18,619 - __main__ - INFO - 
+2026-01-31 13:33:14,696 - __main__ - INFO - 
 **Plot Name:** Distribution of DurCategory
 
-2026-01-30 23:58:18,619 - __main__ - INFO - Stats for plotted feature (DurCategory counts):
+2026-01-31 13:33:14,696 - __main__ - INFO - Stats for plotted feature (DurCategory counts):
 
 | Category | Count |
 |---|---|
@@ -191,36 +191,36 @@ memory usage: 1.5+ MB
 | medium | 13 |
 | short | 8 |
 
-2026-01-30 23:58:18,797 - __main__ - INFO - DurCategory distribution plot saved to plots/S3_durcategory_distribution.png
-2026-01-30 23:58:18,877 - __main__ - INFO - 
+2026-01-31 13:33:14,799 - __main__ - INFO - DurCategory distribution plot saved to plots/S3_durcategory_distribution.png
+2026-01-31 13:33:14,850 - __main__ - INFO - 
 **Plot Name:** Distribution of BytePktRatio
 
-2026-01-30 23:58:18,877 - __main__ - INFO - Stats for plotted feature:
+2026-01-31 13:33:14,851 - __main__ - INFO - Stats for plotted feature:
 
 | Metric | Value |
 |---|---|
 | count | 10882.0 |
 | mean | 822.1099264102124 |
-| std | 421.4506072744979 |
+| std | 421.45060727449794 |
 | min | 60.0 |
 | 25% | 292.0 |
 | 50% | 1066.0 |
 | 75% | 1066.0 |
 | max | 1066.0 |
 
-2026-01-30 23:58:18,878 - __main__ - INFO - data: 60.0
-2026-01-30 23:58:18,878 - __main__ - INFO - Applied log scale for this plot
+2026-01-31 13:33:14,851 - __main__ - INFO - data: 60.0
+2026-01-31 13:33:14,851 - __main__ - INFO - Applied log scale for this plot
 
-2026-01-30 23:58:19,016 - __main__ - INFO - BytePktRatio box plot saved to plots/S3_bytepktratio_boxplot.png
-2026-01-30 23:58:33,483 - __main__ - INFO - 
+2026-01-31 13:33:14,922 - __main__ - INFO - BytePktRatio box plot saved to plots/S3_bytepktratio_boxplot.png
+2026-01-31 13:33:14,999 - __main__ - INFO - 
 **Plot Name:** Distribution of BytesPerSecond
 
-2026-01-30 23:58:33,484 - __main__ - INFO - Stats for plotted feature:
+2026-01-31 13:33:14,999 - __main__ - INFO - Stats for plotted feature:
 
 | Metric | Value |
 |---|---|
 | count | 10882.0 |
-| mean | 65707.63308488764 |
+| mean | 65707.63308488762 |
 | std | 195364.19446828734 |
 | min | 0.0 |
 | 25% | 0.0 |
@@ -228,34 +228,34 @@ memory usage: 1.5+ MB
 | 75% | 243.2164971812862 |
 | max | 1748538.0116959063 |
 
-2026-01-30 23:58:33,484 - __main__ - INFO - data: 0.0
-2026-01-30 23:58:33,484 - __main__ - INFO - Applied symlog scale for this plot
+2026-01-31 13:33:15,000 - __main__ - INFO - data: 0.0
+2026-01-31 13:33:15,000 - __main__ - INFO - Applied symlog scale for this plot
 
-2026-01-30 23:58:46,983 - __main__ - INFO - Plot for BytesPerSecond saved to plots/S3_bytes_per_second_dist.png
-2026-01-31 00:00:41,707 - __main__ - INFO - 
+2026-01-31 13:33:15,224 - __main__ - INFO - Plot for BytesPerSecond saved to plots/S3_bytes_per_second_dist.png
+2026-01-31 13:33:15,338 - __main__ - INFO - 
 **Plot Name:** Distribution of PktsPerSecond
 
-2026-01-31 00:00:41,707 - __main__ - INFO - Stats for plotted feature:
+2026-01-31 13:33:15,345 - __main__ - INFO - Stats for plotted feature:
 
 | Metric | Value |
 |---|---|
 | count | 10882.0 |
 | mean | 601.4648290374602 |
-| std | 1396.1123327844944 |
+| std | 1396.1123327844946 |
 | min | 0.0 |
 | 25% | 0.0 |
 | 50% | 0.0 |
 | 75% | 0.23277560736508965 |
 | max | 12987.012987012988 |
 
-2026-01-31 00:00:41,708 - __main__ - INFO - data: 0.0
-2026-01-31 00:00:41,708 - __main__ - INFO - Applied symlog scale for this plot
+2026-01-31 13:33:15,346 - __main__ - INFO - data: 0.0
+2026-01-31 13:33:15,346 - __main__ - INFO - Applied symlog scale for this plot
 
-2026-01-31 00:02:26,153 - __main__ - INFO - Plot for PktsPerSecond saved to plots/S3_pkts_per_second_dist.png
-2026-01-31 00:03:26,338 - __main__ - INFO - 
+2026-01-31 13:33:15,506 - __main__ - INFO - Plot for PktsPerSecond saved to plots/S3_pkts_per_second_dist.png
+2026-01-31 13:33:15,594 - __main__ - INFO - 
 **Plot Name:** Distribution of SrcAddrEntropy
 
-2026-01-31 00:03:26,343 - __main__ - INFO - Stats for plotted feature:
+2026-01-31 13:33:15,594 - __main__ - INFO - Stats for plotted feature:
 
 | Metric | Value |
 |---|---|
@@ -268,14 +268,14 @@ memory usage: 1.5+ MB
 | 75% | 3.0269868333592873 |
 | max | 3.027169118440619 |
 
-2026-01-31 00:03:26,343 - __main__ - INFO - data: 2.625814583693911
-2026-01-31 00:03:26,343 - __main__ - INFO - Applied log scale for this plot
+2026-01-31 13:33:15,594 - __main__ - INFO - data: 2.625814583693911
+2026-01-31 13:33:15,595 - __main__ - INFO - Applied log scale for this plot
 
-2026-01-31 00:03:26,734 - __main__ - INFO - Plot for SrcAddrEntropy saved to plots/S3_src_addr_entropy_dist.png
-2026-01-31 00:03:26,860 - __main__ - INFO - 
+2026-01-31 13:33:15,738 - __main__ - INFO - Plot for SrcAddrEntropy saved to plots/S3_src_addr_entropy_dist.png
+2026-01-31 13:33:15,825 - __main__ - INFO - 
 **Plot Name:** Distribution of DstAddrEntropy
 
-2026-01-31 00:03:26,865 - __main__ - INFO - Stats for plotted feature:
+2026-01-31 13:33:15,826 - __main__ - INFO - Stats for plotted feature:
 
 | Metric | Value |
 |---|---|
@@ -288,17 +288,17 @@ memory usage: 1.5+ MB
 | 75% | 2.855388542207534 |
 | max | 3.039148671903071 |
 
-2026-01-31 00:03:26,866 - __main__ - INFO - data: 2.1180782093497093
-2026-01-31 00:03:26,868 - __main__ - INFO - Applied log scale for this plot
+2026-01-31 13:33:15,826 - __main__ - INFO - data: 2.1180782093497093
+2026-01-31 13:33:15,826 - __main__ - INFO - Applied log scale for this plot
 
-2026-01-31 00:03:27,151 - __main__ - INFO - Plot for DstAddrEntropy saved to plots/S3_dst_addr_entropy_dist.png
-2026-01-31 00:03:27,210 - __main__ - INFO - 
+2026-01-31 13:33:15,949 - __main__ - INFO - Plot for DstAddrEntropy saved to plots/S3_dst_addr_entropy_dist.png
+2026-01-31 13:33:16,013 - __main__ - INFO - 
 
 SECTION 4: VISUALIZATIONS
 
-2026-01-31 00:03:27,210 - __main__ - INFO - Creating basic visualizations...
-2026-01-31 00:03:27,559 - __main__ - INFO - S4 - Bar/Pie chart figure saved to plots/S4_botnet_distribution.png
-2026-01-31 00:03:27,629 - __main__ - INFO - 
+2026-01-31 13:33:16,013 - __main__ - INFO - Creating basic visualizations...
+2026-01-31 13:33:16,132 - __main__ - INFO - S4 - Bar/Pie chart figure saved to plots/S4_botnet_distribution.png
+2026-01-31 13:33:16,163 - __main__ - INFO - 
 **Botnet vs Normal Distribution**
 
 | Key | Value |
@@ -306,45 +306,45 @@ SECTION 4: VISUALIZATIONS
 | 1 | 8164 |
 | 0 | 2718 |
 
-2026-01-31 00:03:28,299 - __main__ - INFO - S4 - Hierarchically clustered correlogram saved to plots/S4_correlation_clustered.png
-2026-01-31 00:03:28,455 - __main__ - INFO - Creating additional distribution plots for numeric & categorical features...
-2026-01-31 00:03:28,654 - __main__ - INFO - S4 - Count plot saved to plots/S4_countplot_sortrange_botnet.png
-2026-01-31 00:03:28,699 - __main__ - INFO - 
+2026-01-31 13:33:16,374 - __main__ - INFO - S4 - Hierarchically clustered correlogram saved to plots/S4_correlation_clustered.png
+2026-01-31 13:33:16,423 - __main__ - INFO - Creating additional distribution plots for numeric & categorical features...
+2026-01-31 13:33:16,563 - __main__ - INFO - S4 - Count plot saved to plots/S4_countplot_sortrange_botnet.png
+2026-01-31 13:33:16,587 - __main__ - INFO - 
 **S4 - SportRange Distribution Counts**
 
 | Key | Value |
 |---|---|
-| (0, 0) | 315 |
-| (1, 0) | 309 |
-| (1, 1) | 18 |
-| (2, 0) | 2089 |
-| (2, 1) | 8143 |
-| (3, 0) | 5 |
-| (3, 1) | 3 |
+| ('Ephemeral', 0) | 315 |
+| ('Registered', 0) | 309 |
+| ('Registered', 1) | 18 |
+| ('Unknown', 0) | 2089 |
+| ('Unknown', 1) | 8143 |
+| ('WellKnown', 0) | 5 |
+| ('WellKnown', 1) | 3 |
 
-2026-01-31 00:03:28,896 - __main__ - INFO - S4 - Box plot saved to plots/S4_boxplot_pktspersec_botnet.png
-2026-01-31 00:03:28,942 - __main__ - INFO - 
+2026-01-31 13:33:16,669 - __main__ - INFO - S4 - Box plot saved to plots/S4_boxplot_pktspersec_botnet.png
+2026-01-31 13:33:16,694 - __main__ - INFO - 
 **S4 - PktsPerSecond Stats**
 
 | Key | Value |
 |---|---|
 | count | 10882.0 |
 | mean | 601.4648290374602 |
-| std | 1396.1123327844944 |
+| std | 1396.1123327844946 |
 | min | 0.0 |
 | 25% | 0.0 |
 | 50% | 0.0 |
 | 75% | 0.23277560736508965 |
 | max | 12987.012987012988 |
 
-2026-01-31 00:03:29,290 - __main__ - INFO - S4 - Strip plot saved to plots/S4_stripplot_bytespersec_botnet.png
-2026-01-31 00:03:29,425 - __main__ - INFO - 
+2026-01-31 13:33:16,907 - __main__ - INFO - S4 - Strip plot saved to plots/S4_stripplot_bytespersec_botnet.png
+2026-01-31 13:33:16,996 - __main__ - INFO - 
 **S4 - BytesPerSecond Stats**
 
 | Key | Value |
 |---|---|
 | count | 10882.0 |
-| mean | 65707.63308488764 |
+| mean | 65707.63308488762 |
 | std | 195364.19446828734 |
 | min | 0.0 |
 | 25% | 0.0 |
@@ -352,21 +352,21 @@ SECTION 4: VISUALIZATIONS
 | 75% | 243.2164971812862 |
 | max | 1748538.0116959063 |
 
-2026-01-31 00:03:29,425 - __main__ - INFO - Creating recommended additional visualizations for numeric vs. Botnet...
-2026-01-31 00:03:53,240 - __main__ - INFO - S4 - Pair plot with hue=Botnet saved to plots/S4_pairplot_numeric_botnet.png
-2026-01-31 00:03:59,352 - __main__ - INFO - S4 - Violin plot for BytesPerSecond saved to plots/S4_violinplot_bytespersec_botnet.png
-2026-01-31 00:03:59,400 - __main__ - INFO - SECTION 4 visualizations complete.
+2026-01-31 13:33:16,996 - __main__ - INFO - Creating recommended additional visualizations for numeric vs. Botnet...
+2026-01-31 13:33:27,580 - __main__ - INFO - S4 - Pair plot with hue=Botnet saved to plots/S4_pairplot_numeric_botnet.png
+2026-01-31 13:33:30,142 - __main__ - INFO - S4 - Violin plot for BytesPerSecond saved to plots/S4_violinplot_bytespersec_botnet.png
+2026-01-31 13:33:30,166 - __main__ - INFO - SECTION 4 visualizations complete.
 
-2026-01-31 00:03:59,416 - __main__ - INFO - 
+2026-01-31 13:33:30,181 - __main__ - INFO - 
 
 SECTION 5: TRAIN-TEST SPLIT AND MULTI-MODEL PIPELINE
 
-2026-01-31 00:03:59,416 - __main__ - INFO - Splitting dataset into train and test sets...
-2026-01-31 00:03:59,420 - __main__ - INFO - Train set shape: (8705, 15), Test set shape: (2177, 15)
-2026-01-31 00:03:59,420 - __main__ - INFO - Ensuring all features are numeric by converting categorical columns to codes...
-2026-01-31 00:03:59,421 - __main__ - INFO - 
+2026-01-31 13:33:30,182 - __main__ - INFO - Splitting dataset into train and test sets...
+2026-01-31 13:33:30,185 - __main__ - INFO - Train set shape: (8705, 15), Test set shape: (2177, 15)
+2026-01-31 13:33:30,185 - __main__ - INFO - Ensuring all features are numeric by converting categorical columns to codes...
+2026-01-31 13:33:30,187 - __main__ - INFO - 
 ------------------------------------------------------------
-2026-01-31 00:03:59,421 - __main__ - INFO - STARTING MODEL: RandomForest (GridSearchCV)
-2026-01-31 00:03:59,422 - __main__ - INFO - ------------------------------------------------------------
+2026-01-31 13:33:30,187 - __main__ - INFO - STARTING MODEL: RandomForest (GridSearchCV)
+2026-01-31 13:33:30,187 - __main__ - INFO - ------------------------------------------------------------
 
-2026-01-31 00:03:59,422 - __main__ - INFO - Fitting RandomForest model with GridSearchCV...
+2026-01-31 13:33:30,187 - __main__ - INFO - Fitting RandomForest model with GridSearchCV...
