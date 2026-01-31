@@ -1,12 +1,12 @@
-2025-01-07 21:58:12,731 - __main__ - INFO - Section 1 logging setup, imported libraries, & global variables
+2026-01-30 23:58:14,244 - __main__ - INFO - Section 1 logging setup, imported libraries, & global variables
 
-2025-01-07 21:58:12,752 - __main__ - INFO - 
+2026-01-30 23:58:14,280 - __main__ - INFO - 
 
 SECTION 2: LOAD & EXPLORE DATA
 
-2025-01-07 21:58:12,924 - __main__ - INFO - Successfully loaded DataFrame with shape: (107251, 15)
-2025-01-07 21:58:12,924 - __main__ - INFO - Sample rows of the DataFrame:
-2025-01-07 21:58:12,924 - __main__ - INFO - 
+2026-01-30 23:58:14,404 - __main__ - INFO - Successfully loaded DataFrame with shape: (107251, 15)
+2026-01-30 23:58:14,405 - __main__ - INFO - Sample rows of the DataFrame:
+2026-01-30 23:58:14,411 - __main__ - INFO - 
 |    | StartTime                  |     Dur | Proto   | SrcAddr       |   Sport | Dir   | DstAddr       |   Dport | State   |   sTos |   dTos |   TotPkts |   TotBytes |   SrcBytes | Label                           |
 |---:|:---------------------------|--------:|:--------|:--------------|--------:|:------|:--------------|--------:|:--------|-------:|-------:|----------:|-----------:|-----------:|:--------------------------------|
 |  0 | 2011/08/18 15:40:53.826372 | 2.98325 | tcp     | 76.76.172.248 |   63577 | ->    | 147.32.84.229 |   13363 | SR_SA   |      0 |      0 |         3 |        184 |        122 | flow=Background-TCP-Established |
@@ -15,8 +15,8 @@ SECTION 2: LOAD & EXPLORE DATA
 |  3 | 2011/08/18 15:40:56.809619 | 6.01623 | tcp     | 76.76.172.248 |   63577 | ->    | 147.32.84.229 |   13363 | SR_SA   |      0 |      0 |         3 |        184 |        122 | flow=Background-TCP-Established |
 |  4 | 2011/08/18 15:40:58.341523 | 6.12472 | tcp     | 76.76.172.248 |   63580 | ->    | 147.32.84.229 |     443 | SR_SA   |      0 |      0 |         3 |        184 |        122 | flow=Background-TCP-Established |
 
-2025-01-07 21:58:12,925 - __main__ - INFO - Data types:
-2025-01-07 21:58:12,940 - __main__ - INFO - 
+2026-01-30 23:58:14,411 - __main__ - INFO - Data types:
+2026-01-30 23:58:14,427 - __main__ - INFO - 
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 107251 entries, 0 to 107250
 Data columns (total 15 columns):
@@ -41,13 +41,13 @@ dtypes: float64(3), int64(3), object(9)
 memory usage: 12.3+ MB
 
 
-2025-01-07 21:58:12,941 - __main__ - INFO - Grouping 'Label' into Background, Botnet, or Normal...
+2026-01-30 23:58:14,428 - __main__ - INFO - Grouping 'Label' into Background, Botnet, or Normal...
 
-2025-01-07 21:58:12,954 - __main__ - INFO - Distribution of LabelGroup: {'Background': 96369, 'Botnet': 8164, 'Normal': 2718}
-2025-01-07 21:58:13,152 - __main__ - INFO - S2 - Combined bar/pie chart saved to plots/S2_target_distribution_combined.png
-2025-01-07 21:58:13,198 - __main__ - INFO - Checking for missing values & describing basic stats...
+2026-01-30 23:58:14,439 - __main__ - INFO - Distribution of LabelGroup: {'Background': 96369, 'Botnet': 8164, 'Normal': 2718}
+2026-01-30 23:58:14,789 - __main__ - INFO - S2 - Combined bar/pie chart saved to plots/S2_target_distribution_combined.png
+2026-01-30 23:58:14,847 - __main__ - INFO - Checking for missing values & describing basic stats...
 
-2025-01-07 21:58:13,215 - __main__ - INFO - Missing values per column:
+2026-01-30 23:58:14,860 - __main__ - INFO - Missing values per column:
 
 |            |     0 |
 |:-----------|------:|
@@ -68,9 +68,9 @@ memory usage: 12.3+ MB
 | Label      |     0 |
 | LabelGroup |     0 |
 
-2025-01-07 21:58:13,215 - __main__ - INFO - Explanation: Some columns (Sport, Dport, sTos, dTos, State) may be missing if not recorded.
+2026-01-30 23:58:14,860 - __main__ - INFO - Explanation: Some columns (Sport, Dport, sTos, dTos, State) may be missing if not recorded.
 
-2025-01-07 21:58:13,304 - __main__ - INFO - Basic statistics of all columns:
+2026-01-30 23:58:14,931 - __main__ - INFO - Basic statistics of all columns:
 
 |        | StartTime                  |           Dur | Proto   | SrcAddr       |   Sport | Dir    | DstAddr     |   Dport | State   |           sTos |           dTos |     TotPkts |         TotBytes |         SrcBytes | Label                           | LabelGroup   |
 |:-------|:---------------------------|--------------:|:--------|:--------------|--------:|:-------|:------------|--------:|:--------|---------------:|---------------:|------------:|-----------------:|-----------------:|:--------------------------------|:-------------|
@@ -86,33 +86,33 @@ memory usage: 12.3+ MB
 | 75%    | nan                        |      0.348301 | nan     | nan           |     nan | nan    | nan         |     nan | nan     |      0         |     0          |      4      |   1066           |    530           | nan                             | nan          |
 | max    | nan                        |    971.288    | nan     | nan           |     nan | nan    | nan         |     nan | nan     |    192         |     3          | 498932      |      5.03831e+08 |      2.28729e+07 | nan                             | nan          |
 
-2025-01-07 21:58:13,305 - __main__ - INFO - Creating top 20 Source IP Chart, Scaled (All Traffic)
+2026-01-30 23:58:14,931 - __main__ - INFO - Creating top 20 Source IP Chart, Scaled (All Traffic)
 
-2025-01-07 21:58:13,596 - __main__ - INFO - S2 - Top 20 source IP chart (All Traffic) saved to plots/S2_top_20_src_ips_all_scaled.png
-2025-01-07 21:58:13,672 - __main__ - INFO - Top 20 Source IP distribution counts: {'Background': 51525, 'Botnet': 8157, 'Normal': 2115}
-2025-01-07 21:58:13,676 - __main__ - INFO - Creating top 20 Source IP Chart, Scaled (Normal + Botnet Traffic)
+2026-01-30 23:58:15,365 - __main__ - INFO - S2 - Top 20 source IP chart (All Traffic) saved to plots/S2_top_20_src_ips_all_scaled.png
+2026-01-30 23:58:15,460 - __main__ - INFO - Top 20 Source IP distribution counts: {'Background': 51525, 'Botnet': 8157, 'Normal': 2115}
+2026-01-30 23:58:15,463 - __main__ - INFO - Creating top 20 Source IP Chart, Scaled (Normal + Botnet Traffic)
 
-2025-01-07 21:58:13,922 - __main__ - INFO - S2 - Top 20 source IP chart (Botnet+Normal) saved to plots/S2_top_20_src_ips_botnet_normal_scaled.png
-2025-01-07 21:58:13,993 - __main__ - INFO - Creating Top 20 Destination IP Chart, Scaled (All Traffic)
+2026-01-30 23:58:15,808 - __main__ - INFO - S2 - Top 20 source IP chart (Botnet+Normal) saved to plots/S2_top_20_src_ips_botnet_normal_scaled.png
+2026-01-30 23:58:15,896 - __main__ - INFO - Creating Top 20 Destination IP Chart, Scaled (All Traffic)
 
-2025-01-07 21:58:14,286 - __main__ - INFO - S2 - Top 20 destination IP chart (All Traffic) saved to plots/S2_top_20_dst_ips_all_scaled.png
-2025-01-07 21:58:14,364 - __main__ - INFO - Top 20 Destination IP distribution counts: {'Background': 65740, 'Botnet': 8155, 'Normal': 2498}
-2025-01-07 21:58:14,368 - __main__ - INFO - Creating Top 20 Destination IP Chart, Scaled (Normal + Botnet Traffic)
+2026-01-30 23:58:16,323 - __main__ - INFO - S2 - Top 20 destination IP chart (All Traffic) saved to plots/S2_top_20_dst_ips_all_scaled.png
+2026-01-30 23:58:16,420 - __main__ - INFO - Top 20 Destination IP distribution counts: {'Background': 65740, 'Botnet': 8155, 'Normal': 2498}
+2026-01-30 23:58:16,423 - __main__ - INFO - Creating Top 20 Destination IP Chart, Scaled (Normal + Botnet Traffic)
 
-2025-01-07 21:58:14,624 - __main__ - INFO - S2 - Top 20 destination IP chart (Botnet+Normal) saved to plots/S2_top_20_dst_ips_botnet_normal_scaled.png
-2025-01-07 21:58:14,698 - __main__ - INFO - Plotting time-based packets (All Traffic)...
+2026-01-30 23:58:16,785 - __main__ - INFO - S2 - Top 20 destination IP chart (Botnet+Normal) saved to plots/S2_top_20_dst_ips_botnet_normal_scaled.png
+2026-01-30 23:58:16,892 - __main__ - INFO - Plotting time-based packets (All Traffic)...
 
-2025-01-07 21:58:14,711 - __main__ - INFO - Earliest timestamp: 2011-08-18 15:39:35.087798
+2026-01-30 23:58:16,905 - __main__ - INFO - Earliest timestamp: 2011-08-18 15:39:35.087798
 Latest timestamp: 2011-08-18 15:55:46.379941
 Total capture duration: 0 days 00:16:11.292143
 
-2025-01-07 21:58:15,009 - __main__ - INFO - S2 - Time-based packets (All Traffic) saved to plots/S2_time_based_totpkts_all_scaled.png
-2025-01-07 21:58:15,097 - __main__ - INFO - Time-based packet stats (sum per minute): {'count': 17.0, 'mean': 258509.5294117647, 'std': 474000.8773293723, 'min': 23881.0, '25%': 68433.0, '50%': 87869.0, '75%': 159754.0, 'max': 1885782.0}
-2025-01-07 21:58:15,097 - __main__ - INFO - Creating time-based average duration chart, scaled (All Traffic)...
+2026-01-30 23:58:17,308 - __main__ - INFO - S2 - Time-based packets (All Traffic) saved to plots/S2_time_based_totpkts_all_scaled.png
+2026-01-30 23:58:17,401 - __main__ - INFO - Time-based packet stats (sum per minute): {'count': 17.0, 'mean': 258509.5294117647, 'std': 474000.87732937234, 'min': 23881.0, '25%': 68433.0, '50%': 87869.0, '75%': 159754.0, 'max': 1885782.0}
+2026-01-30 23:58:17,402 - __main__ - INFO - Creating time-based average duration chart, scaled (All Traffic)...
 
-2025-01-07 21:58:15,386 - __main__ - INFO - S2 - Time-based average Dur (All Traffic) saved to plots/S2_time_based_avg_dur_all_scaled.png
-2025-01-07 21:58:15,456 - __main__ - INFO - Time-based average duration stats (mean per minute): {'count': 51.0, 'mean': 37.904090179296055, 'std': 79.84021259408507, 'min': 0.0, '25%': 0.0009210759717314487, '50%': 9.488129102349971, '75%': 24.07293478125, 'max': 454.9645861666667}
-2025-01-07 21:58:15,467 - __main__ - INFO - 
+2026-01-30 23:58:17,758 - __main__ - INFO - S2 - Time-based average Dur (All Traffic) saved to plots/S2_time_based_avg_dur_all_scaled.png
+2026-01-30 23:58:17,835 - __main__ - INFO - Time-based average duration stats (mean per minute): {'count': 51.0, 'mean': 37.904090179296055, 'std': 79.84021259408507, 'min': 0.0, '25%': 0.0009210759717314487, '50%': 9.488129102349971, '75%': 24.07293478125, 'max': 454.9645861666667}
+2026-01-30 23:58:17,847 - __main__ - INFO - 
 | Category  | Metric                                                    |                                          Value |
 |:--------- |:--------------------------------------------------------- |----------------------------------------------:|
 | Botnet    | Number of unique Botnet source IPs                        | 3                          |
@@ -126,21 +126,21 @@ Total capture duration: 0 days 00:16:11.292143
 | Botnet    | Botnet Duration (seconds) [min, mean, max]                | [0.00, 7.86, 416.85] |
 | Normal    | Normal Duration (seconds) [min, mean, max]                | [0.00, 7.88, 969.98] |
 
-2025-01-07 21:58:15,467 - __main__ - INFO - 
+2026-01-30 23:58:17,847 - __main__ - INFO - 
 Creating a Botnet Source→Target Destination Graph
 
-2025-01-07 21:58:15,781 - __main__ - INFO - 
+2026-01-30 23:58:18,341 - __main__ - INFO - 
 plots/S2_botnet_src_dist_plot.png
 
-2025-01-07 21:58:15,887 - __main__ - INFO - 
+2026-01-30 23:58:18,434 - __main__ - INFO - 
 
 SECTION 3 (Enhanced): BASIC DATA CLEANING & FEATURE ENGINEERING
 
-2025-01-07 21:58:15,998 - __main__ - INFO - Created DurCategory feature. Distribution: {'very_short': 10106, 'long': 755, 'medium': 13, 'short': 8}
-2025-01-07 21:58:16,027 - __main__ - INFO - Created BytePktRatio feature. Basic stats: {'count': 10882.0, 'mean': 822.1099264102124, 'std': 421.45060727454836, 'min': 60.0, '25%': 292.0, '50%': 1066.0, '75%': 1066.0, 'max': 1066.0}
-2025-01-07 21:58:16,028 - __main__ - INFO - Enhanced Feature matrix shape: (10882, 17), Target vector shape: (10882,)
-2025-01-07 21:58:16,031 - __main__ - INFO - Showing the first few rows of the enhanced DataFrame:
-2025-01-07 21:58:16,032 - __main__ - INFO - 
+2026-01-30 23:58:18,558 - __main__ - INFO - Created DurCategory feature. Distribution: {'very_short': 10106, 'long': 755, 'medium': 13, 'short': 8}
+2026-01-30 23:58:18,598 - __main__ - INFO - Created BytePktRatio feature. Basic stats: {'count': 10882.0, 'mean': 822.1099264102124, 'std': 421.4506072744979, 'min': 60.0, '25%': 292.0, '50%': 1066.0, '75%': 1066.0, 'max': 1066.0}
+2026-01-30 23:58:18,599 - __main__ - INFO - Enhanced Feature matrix shape: (10882, 17), Target vector shape: (10882,)
+2026-01-30 23:58:18,602 - __main__ - INFO - Showing the first few rows of the enhanced DataFrame:
+2026-01-30 23:58:18,603 - __main__ - INFO - 
 
 |     |     Dur | Proto   | Dir   | State   | SrcAddr       | DstAddr        | SportRange   | DportRange   |   TotPkts |   TotBytes |   SrcBytes |   BytesPerSecond |   PktsPerSecond |   BytePktRatio |   SrcAddrEntropy |   DstAddrEntropy | DurCategory   |   Botnet |
 |----:|--------:|:--------|:------|:--------|:--------------|:---------------|:-------------|:-------------|----------:|-----------:|-----------:|-----------------:|----------------:|---------------:|-----------------:|-----------------:|:--------------|---------:|
@@ -150,7 +150,7 @@ SECTION 3 (Enhanced): BASIC DATA CLEANING & FEATURE ENGINEERING
 | 568 | 265.885 | tcp     | <?>   | PA_RA   | 147.32.84.134 | 205.188.17.129 | Ephemeral    | WellKnown    |        17 |       1020 |        480 |          3.83625 |       0.0639375 |        60      |          2.66123 |          2.84237 | long          |        0 |
 | 569 | 960.5   | tcp     | <?>   | PA_A    | 147.32.84.134 | 64.12.73.133   | Ephemeral    | WellKnown    |        62 |       3720 |       1860 |          3.87298 |       0.0645497 |        60      |          2.66123 |          2.62581 | long          |        0 |
 
-2025-01-07 21:58:16,034 - __main__ - INFO - 
+2026-01-30 23:58:18,605 - __main__ - INFO - 
 
 <class 'pandas.core.frame.DataFrame'>
 Index: 10882 entries, 40 to 106683
@@ -179,10 +179,10 @@ dtypes: category(1), float64(6), int64(4), object(7)
 memory usage: 1.5+ MB
 
 
-2025-01-07 21:58:16,048 - __main__ - INFO - 
+2026-01-30 23:58:18,619 - __main__ - INFO - 
 **Plot Name:** Distribution of DurCategory
 
-2025-01-07 21:58:16,048 - __main__ - INFO - Stats for plotted feature (DurCategory counts):
+2026-01-30 23:58:18,619 - __main__ - INFO - Stats for plotted feature (DurCategory counts):
 
 | Category | Count |
 |---|---|
@@ -191,114 +191,114 @@ memory usage: 1.5+ MB
 | medium | 13 |
 | short | 8 |
 
-2025-01-07 21:58:16,185 - __main__ - INFO - DurCategory distribution plot saved to plots/S3_durcategory_distribution.png
-2025-01-07 21:58:16,253 - __main__ - INFO - 
+2026-01-30 23:58:18,797 - __main__ - INFO - DurCategory distribution plot saved to plots/S3_durcategory_distribution.png
+2026-01-30 23:58:18,877 - __main__ - INFO - 
 **Plot Name:** Distribution of BytePktRatio
 
-2025-01-07 21:58:16,253 - __main__ - INFO - Stats for plotted feature:
+2026-01-30 23:58:18,877 - __main__ - INFO - Stats for plotted feature:
 
 | Metric | Value |
 |---|---|
 | count | 10882.0 |
 | mean | 822.1099264102124 |
-| std | 421.45060727454836 |
+| std | 421.4506072744979 |
 | min | 60.0 |
 | 25% | 292.0 |
 | 50% | 1066.0 |
 | 75% | 1066.0 |
 | max | 1066.0 |
 
-2025-01-07 21:58:16,253 - __main__ - INFO - data: 60.0
-2025-01-07 21:58:16,254 - __main__ - INFO - Applied log scale for this plot
+2026-01-30 23:58:18,878 - __main__ - INFO - data: 60.0
+2026-01-30 23:58:18,878 - __main__ - INFO - Applied log scale for this plot
 
-2025-01-07 21:58:16,352 - __main__ - INFO - BytePktRatio box plot saved to plots/S3_bytepktratio_boxplot.png
-2025-01-07 21:58:41,023 - __main__ - INFO - 
+2026-01-30 23:58:19,016 - __main__ - INFO - BytePktRatio box plot saved to plots/S3_bytepktratio_boxplot.png
+2026-01-30 23:58:33,483 - __main__ - INFO - 
 **Plot Name:** Distribution of BytesPerSecond
 
-2025-01-07 21:58:41,023 - __main__ - INFO - Stats for plotted feature:
+2026-01-30 23:58:33,484 - __main__ - INFO - Stats for plotted feature:
 
 | Metric | Value |
 |---|---|
 | count | 10882.0 |
 | mean | 65707.63308488764 |
-| std | 195364.19446829928 |
+| std | 195364.19446828734 |
 | min | 0.0 |
 | 25% | 0.0 |
 | 50% | 0.0 |
 | 75% | 243.2164971812862 |
 | max | 1748538.0116959063 |
 
-2025-01-07 21:58:41,024 - __main__ - INFO - data: 0.0
-2025-01-07 21:58:41,024 - __main__ - INFO - Applied symlog scale for this plot
+2026-01-30 23:58:33,484 - __main__ - INFO - data: 0.0
+2026-01-30 23:58:33,484 - __main__ - INFO - Applied symlog scale for this plot
 
-2025-01-07 21:58:53,165 - __main__ - INFO - Plot for BytesPerSecond saved to plots/S3_bytes_per_second_dist.png
-2025-01-07 22:01:14,521 - __main__ - INFO - 
+2026-01-30 23:58:46,983 - __main__ - INFO - Plot for BytesPerSecond saved to plots/S3_bytes_per_second_dist.png
+2026-01-31 00:00:41,707 - __main__ - INFO - 
 **Plot Name:** Distribution of PktsPerSecond
 
-2025-01-07 22:01:14,526 - __main__ - INFO - Stats for plotted feature:
+2026-01-31 00:00:41,707 - __main__ - INFO - Stats for plotted feature:
 
 | Metric | Value |
 |---|---|
 | count | 10882.0 |
 | mean | 601.4648290374602 |
-| std | 1396.1123327844919 |
+| std | 1396.1123327844944 |
 | min | 0.0 |
 | 25% | 0.0 |
 | 50% | 0.0 |
 | 75% | 0.23277560736508965 |
 | max | 12987.012987012988 |
 
-2025-01-07 22:01:14,526 - __main__ - INFO - data: 0.0
-2025-01-07 22:01:14,526 - __main__ - INFO - Applied symlog scale for this plot
+2026-01-31 00:00:41,708 - __main__ - INFO - data: 0.0
+2026-01-31 00:00:41,708 - __main__ - INFO - Applied symlog scale for this plot
 
-2025-01-07 22:02:48,552 - __main__ - INFO - Plot for PktsPerSecond saved to plots/S3_pkts_per_second_dist.png
-2025-01-07 22:04:24,716 - __main__ - INFO - 
+2026-01-31 00:02:26,153 - __main__ - INFO - Plot for PktsPerSecond saved to plots/S3_pkts_per_second_dist.png
+2026-01-31 00:03:26,338 - __main__ - INFO - 
 **Plot Name:** Distribution of SrcAddrEntropy
 
-2025-01-07 22:04:24,716 - __main__ - INFO - Stats for plotted feature:
+2026-01-31 00:03:26,343 - __main__ - INFO - Stats for plotted feature:
 
 | Metric | Value |
 |---|---|
 | count | 10882.0 |
 | mean | 2.898843920681802 |
-| std | 0.10173272608708873 |
+| std | 0.10173272608709243 |
 | min | 2.625814583693911 |
 | 25% | 2.8150724101159437 |
 | 50% | 2.8150724101159437 |
 | 75% | 3.0269868333592873 |
 | max | 3.027169118440619 |
 
-2025-01-07 22:04:24,716 - __main__ - INFO - data: 2.625814583693911
-2025-01-07 22:04:24,717 - __main__ - INFO - Applied log scale for this plot
+2026-01-31 00:03:26,343 - __main__ - INFO - data: 2.625814583693911
+2026-01-31 00:03:26,343 - __main__ - INFO - Applied log scale for this plot
 
-2025-01-07 22:04:25,019 - __main__ - INFO - Plot for SrcAddrEntropy saved to plots/S3_src_addr_entropy_dist.png
-2025-01-07 22:04:25,123 - __main__ - INFO - 
+2026-01-31 00:03:26,734 - __main__ - INFO - Plot for SrcAddrEntropy saved to plots/S3_src_addr_entropy_dist.png
+2026-01-31 00:03:26,860 - __main__ - INFO - 
 **Plot Name:** Distribution of DstAddrEntropy
 
-2025-01-07 22:04:25,124 - __main__ - INFO - Stats for plotted feature:
+2026-01-31 00:03:26,865 - __main__ - INFO - Stats for plotted feature:
 
 | Metric | Value |
 |---|---|
 | count | 10882.0 |
 | mean | 2.8619192823547737 |
-| std | 0.04248657782943195 |
+| std | 0.04248657782942807 |
 | min | 2.1180782093497093 |
 | 25% | 2.855388542207534 |
 | 50% | 2.855388542207534 |
 | 75% | 2.855388542207534 |
 | max | 3.039148671903071 |
 
-2025-01-07 22:04:25,124 - __main__ - INFO - data: 2.1180782093497093
-2025-01-07 22:04:25,124 - __main__ - INFO - Applied log scale for this plot
+2026-01-31 00:03:26,866 - __main__ - INFO - data: 2.1180782093497093
+2026-01-31 00:03:26,868 - __main__ - INFO - Applied log scale for this plot
 
-2025-01-07 22:04:25,360 - __main__ - INFO - Plot for DstAddrEntropy saved to plots/S3_dst_addr_entropy_dist.png
-2025-01-07 22:04:25,512 - __main__ - INFO - 
+2026-01-31 00:03:27,151 - __main__ - INFO - Plot for DstAddrEntropy saved to plots/S3_dst_addr_entropy_dist.png
+2026-01-31 00:03:27,210 - __main__ - INFO - 
 
 SECTION 4: VISUALIZATIONS
 
-2025-01-07 22:04:25,512 - __main__ - INFO - Creating basic visualizations...
-2025-01-07 22:04:25,743 - __main__ - INFO - S4 - Bar/Pie chart figure saved to plots/S4_botnet_distribution.png
-2025-01-07 22:04:25,796 - __main__ - INFO - 
+2026-01-31 00:03:27,210 - __main__ - INFO - Creating basic visualizations...
+2026-01-31 00:03:27,559 - __main__ - INFO - S4 - Bar/Pie chart figure saved to plots/S4_botnet_distribution.png
+2026-01-31 00:03:27,629 - __main__ - INFO - 
 **Botnet vs Normal Distribution**
 
 | Key | Value |
@@ -306,10 +306,10 @@ SECTION 4: VISUALIZATIONS
 | 1 | 8164 |
 | 0 | 2718 |
 
-2025-01-07 22:04:26,285 - __main__ - INFO - S4 - Hierarchically clustered correlogram saved to plots/S4_correlation_clustered.png
-2025-01-07 22:04:26,411 - __main__ - INFO - Creating additional distribution plots for numeric & categorical features...
-2025-01-07 22:04:26,539 - __main__ - INFO - S4 - Count plot saved to plots/S4_countplot_sortrange_botnet.png
-2025-01-07 22:04:26,574 - __main__ - INFO - 
+2026-01-31 00:03:28,299 - __main__ - INFO - S4 - Hierarchically clustered correlogram saved to plots/S4_correlation_clustered.png
+2026-01-31 00:03:28,455 - __main__ - INFO - Creating additional distribution plots for numeric & categorical features...
+2026-01-31 00:03:28,654 - __main__ - INFO - S4 - Count plot saved to plots/S4_countplot_sortrange_botnet.png
+2026-01-31 00:03:28,699 - __main__ - INFO - 
 **S4 - SportRange Distribution Counts**
 
 | Key | Value |
@@ -322,748 +322,34 @@ SECTION 4: VISUALIZATIONS
 | (3, 0) | 5 |
 | (3, 1) | 3 |
 
-2025-01-07 22:04:26,711 - __main__ - INFO - S4 - Box plot saved to plots/S4_boxplot_pktspersec_botnet.png
-2025-01-07 22:04:26,748 - __main__ - INFO - 
+2026-01-31 00:03:28,896 - __main__ - INFO - S4 - Box plot saved to plots/S4_boxplot_pktspersec_botnet.png
+2026-01-31 00:03:28,942 - __main__ - INFO - 
 **S4 - PktsPerSecond Stats**
 
 | Key | Value |
 |---|---|
 | count | 10882.0 |
 | mean | 601.4648290374602 |
-| std | 1396.1123327844919 |
+| std | 1396.1123327844944 |
 | min | 0.0 |
 | 25% | 0.0 |
 | 50% | 0.0 |
 | 75% | 0.23277560736508965 |
 | max | 12987.012987012988 |
 
-2025-01-07 22:04:26,948 - __main__ - INFO - S4 - Strip plot saved to plots/S4_stripplot_bytespersec_botnet.png
-2025-01-07 22:04:27,007 - __main__ - INFO - 
+2026-01-31 00:03:29,290 - __main__ - INFO - S4 - Strip plot saved to plots/S4_stripplot_bytespersec_botnet.png
+2026-01-31 00:03:29,425 - __main__ - INFO - 
 **S4 - BytesPerSecond Stats**
 
 | Key | Value |
 |---|---|
 | count | 10882.0 |
 | mean | 65707.63308488764 |
-| std | 195364.19446829928 |
+| std | 195364.19446828734 |
 | min | 0.0 |
 | 25% | 0.0 |
 | 50% | 0.0 |
 | 75% | 243.2164971812862 |
 | max | 1748538.0116959063 |
 
-2025-01-07 22:04:27,008 - __main__ - INFO - Creating recommended additional visualizations for numeric vs. Botnet...
-2025-01-07 22:04:51,406 - __main__ - INFO - S4 - Pair plot with hue=Botnet saved to plots/S4_pairplot_numeric_botnet.png
-2025-01-07 22:04:57,196 - __main__ - INFO - S4 - Violin plot for BytesPerSecond saved to plots/S4_violinplot_bytespersec_botnet.png
-2025-01-07 22:04:57,300 - __main__ - INFO - SECTION 4 visualizations complete.
-
-2025-01-07 22:04:57,375 - __main__ - INFO - 
-
-SECTION 5: TRAIN-TEST SPLIT AND MULTI-MODEL PIPELINE
-
-2025-01-07 22:04:57,376 - __main__ - INFO - Splitting dataset into train and test sets...
-2025-01-07 22:04:57,378 - __main__ - INFO - Train set shape: (8705, 15), Test set shape: (2177, 15)
-2025-01-07 22:04:57,378 - __main__ - INFO - Ensuring all features are numeric by converting categorical columns to codes...
-2025-01-07 22:04:57,380 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:04:57,380 - __main__ - INFO - STARTING MODEL: RandomForest (GridSearchCV)
-2025-01-07 22:04:57,380 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:04:57,380 - __main__ - INFO - Fitting RandomForest model with GridSearchCV...
-2025-01-07 22:04:59,553 - __main__ - INFO - RandomForest -> Training time: 2.17 seconds
-2025-01-07 22:04:59,564 - __main__ - INFO - 
-2025-01-07 22:04:59,564 - __main__ - INFO - Classification Report for RandomForest:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00       544
-           1       1.00      1.00      1.00      1633
-
-    accuracy                           1.00      2177
-   macro avg       1.00      1.00      1.00      2177
-weighted avg       1.00      1.00      1.00      2177
-
-2025-01-07 22:04:59,564 - __main__ - INFO - RandomForest -> Best Params: {'clf__max_depth': 10, 'clf__min_samples_leaf': 1, 'clf__min_samples_split': 5, 'clf__n_estimators': 50}
-2025-01-07 22:04:59,564 - __main__ - INFO - RandomForest -> Best CV Score (F1): 0.9990
-2025-01-07 22:04:59,564 - __main__ - INFO - RandomForest -> Test Accuracy: 0.9986
-2025-01-07 22:04:59,564 - __main__ - INFO - RandomForest -> Test Precision: 0.9988
-2025-01-07 22:04:59,564 - __main__ - INFO - RandomForest -> Test Recall: 0.9994
-2025-01-07 22:04:59,564 - __main__ - INFO - RandomForest -> Test F1 Score: 0.9991
-2025-01-07 22:04:59,564 - __main__ - INFO - RandomForest -> Test ROC AUC: 1.0000
-2025-01-07 22:04:59,565 - __main__ - INFO - 
-2025-01-07 22:04:59,566 - __main__ - INFO - RandomForest -> Top 10 features (feature_importances_):
-2025-01-07 22:04:59,566 - __main__ - INFO -   SrcBytes: 0.2718
-2025-01-07 22:04:59,566 - __main__ - INFO -   TotBytes: 0.1733
-2025-01-07 22:04:59,566 - __main__ - INFO -   BytePktRatio: 0.1582
-2025-01-07 22:04:59,566 - __main__ - INFO -   BytesPerSecond: 0.1328
-2025-01-07 22:04:59,566 - __main__ - INFO -   PktsPerSecond: 0.0987
-2025-01-07 22:04:59,566 - __main__ - INFO -   Dur: 0.0487
-2025-01-07 22:04:59,566 - __main__ - INFO -   State: 0.0452
-2025-01-07 22:04:59,566 - __main__ - INFO -   SrcAddrEntropy: 0.0299
-2025-01-07 22:04:59,566 - __main__ - INFO -   Proto: 0.0087
-2025-01-07 22:04:59,566 - __main__ - INFO -   Dir: 0.0082
-2025-01-07 22:04:59,682 - __main__ - INFO - S5 - Precision-Recall curve saved to plots/S5_pr_curve_RandomForest.png
-2025-01-07 22:04:59,884 - __main__ - INFO - S5 - Gains chart saved to plots/S5_gains_RandomForest.png
-2025-01-07 22:05:00,033 - __main__ - INFO - S5 - Calibration curve saved to plots/S5_calibration_RandomForest.png
-2025-01-07 22:05:00,197 - __main__ - INFO - S5 - ROC curve saved to plots/S5_roc_RandomForest.png
-2025-01-07 22:05:00,322 - __main__ - INFO - S5 - Confusion matrix saved to plots/S5_confusion_matrix_RandomForest.png
-2025-01-07 22:05:00,480 - __main__ - INFO - S5 - Top 10 features bar chart saved to plots/S5_top10_features_RandomForest.png
-2025-01-07 22:05:00,518 - __main__ - INFO - 
-2025-01-07 22:05:00,518 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:00,518 - __main__ - INFO - FINISHED MODEL: RandomForest
-2025-01-07 22:05:00,518 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:00,518 - __main__ - INFO - Starting GridSearch for DecisionTree...
-2025-01-07 22:05:00,518 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:00,519 - __main__ - INFO - STARTING MODEL: DecisionTree (GridSearchCV)
-2025-01-07 22:05:00,519 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:00,519 - __main__ - INFO - Fitting DecisionTree model with GridSearchCV...
-2025-01-07 22:05:00,618 - __main__ - INFO - DecisionTree -> Training time: 0.10 seconds
-2025-01-07 22:05:00,626 - __main__ - INFO - 
-2025-01-07 22:05:00,626 - __main__ - INFO - Classification Report for DecisionTree:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00       544
-           1       1.00      1.00      1.00      1633
-
-    accuracy                           1.00      2177
-   macro avg       1.00      1.00      1.00      2177
-weighted avg       1.00      1.00      1.00      2177
-
-2025-01-07 22:05:00,626 - __main__ - INFO - DecisionTree -> Best Params: {'clf__max_depth': 10, 'clf__min_samples_leaf': 1, 'clf__min_samples_split': 2}
-2025-01-07 22:05:00,626 - __main__ - INFO - DecisionTree -> Best CV Score (F1): 0.9987
-2025-01-07 22:05:00,626 - __main__ - INFO - DecisionTree -> Test Accuracy: 0.9995
-2025-01-07 22:05:00,626 - __main__ - INFO - DecisionTree -> Test Precision: 0.9994
-2025-01-07 22:05:00,626 - __main__ - INFO - DecisionTree -> Test Recall: 1.0000
-2025-01-07 22:05:00,626 - __main__ - INFO - DecisionTree -> Test F1 Score: 0.9997
-2025-01-07 22:05:00,626 - __main__ - INFO - DecisionTree -> Test ROC AUC: 0.9991
-2025-01-07 22:05:00,626 - __main__ - INFO - 
-2025-01-07 22:05:00,627 - __main__ - INFO - DecisionTree -> Top 10 features (feature_importances_):
-2025-01-07 22:05:00,627 - __main__ - INFO -   BytePktRatio: 0.9911
-2025-01-07 22:05:00,627 - __main__ - INFO -   SrcAddrEntropy: 0.0031
-2025-01-07 22:05:00,627 - __main__ - INFO -   SrcBytes: 0.0024
-2025-01-07 22:05:00,627 - __main__ - INFO -   DstAddrEntropy: 0.0012
-2025-01-07 22:05:00,627 - __main__ - INFO -   TotPkts: 0.0011
-2025-01-07 22:05:00,627 - __main__ - INFO -   TotBytes: 0.0006
-2025-01-07 22:05:00,627 - __main__ - INFO -   State: 0.0005
-2025-01-07 22:05:00,627 - __main__ - INFO -   DurCategory: 0.0000
-2025-01-07 22:05:00,627 - __main__ - INFO -   PktsPerSecond: 0.0000
-2025-01-07 22:05:00,627 - __main__ - INFO -   BytesPerSecond: 0.0000
-2025-01-07 22:05:00,715 - __main__ - INFO - S5 - Precision-Recall curve saved to plots/S5_pr_curve_DecisionTree.png
-2025-01-07 22:05:00,862 - __main__ - INFO - S5 - Gains chart saved to plots/S5_gains_DecisionTree.png
-2025-01-07 22:05:01,011 - __main__ - INFO - S5 - Calibration curve saved to plots/S5_calibration_DecisionTree.png
-2025-01-07 22:05:01,180 - __main__ - INFO - S5 - ROC curve saved to plots/S5_roc_DecisionTree.png
-2025-01-07 22:05:01,312 - __main__ - INFO - S5 - Confusion matrix saved to plots/S5_confusion_matrix_DecisionTree.png
-2025-01-07 22:05:01,460 - __main__ - INFO - S5 - Top 10 features bar chart saved to plots/S5_top10_features_DecisionTree.png
-2025-01-07 22:05:01,496 - __main__ - INFO - 
-2025-01-07 22:05:01,496 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:01,496 - __main__ - INFO - FINISHED MODEL: DecisionTree
-2025-01-07 22:05:01,496 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:01,496 - __main__ - INFO - Starting GridSearch for NaiveBayes...
-2025-01-07 22:05:01,496 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:01,496 - __main__ - INFO - STARTING MODEL: NaiveBayes (GridSearchCV)
-2025-01-07 22:05:01,496 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:01,497 - __main__ - INFO - Fitting NaiveBayes model with GridSearchCV...
-2025-01-07 22:05:01,537 - __main__ - INFO - NaiveBayes -> Training time: 0.04 seconds
-2025-01-07 22:05:01,546 - __main__ - INFO - 
-2025-01-07 22:05:01,546 - __main__ - INFO - Classification Report for NaiveBayes:
-              precision    recall  f1-score   support
-
-           0       0.99      1.00      1.00       544
-           1       1.00      1.00      1.00      1633
-
-    accuracy                           1.00      2177
-   macro avg       1.00      1.00      1.00      2177
-weighted avg       1.00      1.00      1.00      2177
-
-2025-01-07 22:05:01,546 - __main__ - INFO - NaiveBayes -> Best Params: {'clf__var_smoothing': 1e-09}
-2025-01-07 22:05:01,546 - __main__ - INFO - NaiveBayes -> Best CV Score (F1): 0.9985
-2025-01-07 22:05:01,546 - __main__ - INFO - NaiveBayes -> Test Accuracy: 0.9986
-2025-01-07 22:05:01,546 - __main__ - INFO - NaiveBayes -> Test Precision: 1.0000
-2025-01-07 22:05:01,546 - __main__ - INFO - NaiveBayes -> Test Recall: 0.9982
-2025-01-07 22:05:01,546 - __main__ - INFO - NaiveBayes -> Test F1 Score: 0.9991
-2025-01-07 22:05:01,546 - __main__ - INFO - NaiveBayes -> Test ROC AUC: 0.9986
-2025-01-07 22:05:01,546 - __main__ - INFO - 
-2025-01-07 22:05:01,546 - __main__ - WARNING - WARNING: NaiveBayes does not provide feature_importances_ or coef_. Skipping top features.
-2025-01-07 22:05:01,636 - __main__ - INFO - S5 - Precision-Recall curve saved to plots/S5_pr_curve_NaiveBayes.png
-2025-01-07 22:05:01,777 - __main__ - INFO - S5 - Gains chart saved to plots/S5_gains_NaiveBayes.png
-2025-01-07 22:05:01,921 - __main__ - INFO - S5 - Calibration curve saved to plots/S5_calibration_NaiveBayes.png
-2025-01-07 22:05:02,073 - __main__ - INFO - S5 - ROC curve saved to plots/S5_roc_NaiveBayes.png
-2025-01-07 22:05:02,191 - __main__ - INFO - S5 - Confusion matrix saved to plots/S5_confusion_matrix_NaiveBayes.png
-2025-01-07 22:05:02,216 - __main__ - INFO - 
-2025-01-07 22:05:02,216 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:02,216 - __main__ - INFO - FINISHED MODEL: NaiveBayes
-2025-01-07 22:05:02,216 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:02,217 - __main__ - INFO - Starting GridSearch for KNN...
-2025-01-07 22:05:02,217 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:02,217 - __main__ - INFO - STARTING MODEL: KNN (GridSearchCV)
-2025-01-07 22:05:02,217 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:02,217 - __main__ - INFO - Fitting KNN model with GridSearchCV...
-2025-01-07 22:05:02,417 - __main__ - INFO - KNN -> Training time: 0.20 seconds
-2025-01-07 22:05:02,510 - __main__ - INFO - 
-2025-01-07 22:05:02,510 - __main__ - INFO - Classification Report for KNN:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00       544
-           1       1.00      1.00      1.00      1633
-
-    accuracy                           1.00      2177
-   macro avg       1.00      1.00      1.00      2177
-weighted avg       1.00      1.00      1.00      2177
-
-2025-01-07 22:05:02,510 - __main__ - INFO - KNN -> Best Params: {'clf__n_neighbors': 5, 'clf__weights': 'distance'}
-2025-01-07 22:05:02,510 - __main__ - INFO - KNN -> Best CV Score (F1): 0.9989
-2025-01-07 22:05:02,510 - __main__ - INFO - KNN -> Test Accuracy: 0.9991
-2025-01-07 22:05:02,510 - __main__ - INFO - KNN -> Test Precision: 1.0000
-2025-01-07 22:05:02,510 - __main__ - INFO - KNN -> Test Recall: 0.9988
-2025-01-07 22:05:02,510 - __main__ - INFO - KNN -> Test F1 Score: 0.9994
-2025-01-07 22:05:02,511 - __main__ - INFO - KNN -> Test ROC AUC: 1.0000
-2025-01-07 22:05:02,511 - __main__ - INFO - 
-2025-01-07 22:05:02,511 - __main__ - WARNING - WARNING: KNN does not provide feature_importances_ or coef_. Skipping top features.
-2025-01-07 22:05:02,597 - __main__ - INFO - S5 - Precision-Recall curve saved to plots/S5_pr_curve_KNN.png
-2025-01-07 22:05:02,734 - __main__ - INFO - S5 - Gains chart saved to plots/S5_gains_KNN.png
-2025-01-07 22:05:02,885 - __main__ - INFO - S5 - Calibration curve saved to plots/S5_calibration_KNN.png
-2025-01-07 22:05:03,041 - __main__ - INFO - S5 - ROC curve saved to plots/S5_roc_KNN.png
-2025-01-07 22:05:03,172 - __main__ - INFO - S5 - Confusion matrix saved to plots/S5_confusion_matrix_KNN.png
-2025-01-07 22:05:03,205 - __main__ - INFO - 
-2025-01-07 22:05:03,205 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:03,205 - __main__ - INFO - FINISHED MODEL: KNN
-2025-01-07 22:05:03,205 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:03,205 - __main__ - INFO - Starting GridSearch for SVM...
-2025-01-07 22:05:03,205 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:03,205 - __main__ - INFO - STARTING MODEL: SVM (GridSearchCV)
-2025-01-07 22:05:03,205 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:03,205 - __main__ - INFO - Fitting SVM model with GridSearchCV...
-2025-01-07 22:05:04,095 - __main__ - INFO - SVM -> Training time: 0.89 seconds
-2025-01-07 22:05:04,103 - __main__ - INFO - 
-2025-01-07 22:05:04,104 - __main__ - INFO - Classification Report for SVM:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00       544
-           1       1.00      1.00      1.00      1633
-
-    accuracy                           1.00      2177
-   macro avg       1.00      1.00      1.00      2177
-weighted avg       1.00      1.00      1.00      2177
-
-2025-01-07 22:05:04,104 - __main__ - INFO - SVM -> Best Params: {'clf__C': 10.0, 'clf__kernel': 'linear'}
-2025-01-07 22:05:04,104 - __main__ - INFO - SVM -> Best CV Score (F1): 0.9991
-2025-01-07 22:05:04,104 - __main__ - INFO - SVM -> Test Accuracy: 0.9991
-2025-01-07 22:05:04,104 - __main__ - INFO - SVM -> Test Precision: 1.0000
-2025-01-07 22:05:04,104 - __main__ - INFO - SVM -> Test Recall: 0.9988
-2025-01-07 22:05:04,104 - __main__ - INFO - SVM -> Test F1 Score: 0.9994
-2025-01-07 22:05:04,104 - __main__ - INFO - SVM -> Test ROC AUC: 0.9989
-2025-01-07 22:05:04,104 - __main__ - INFO - 
-2025-01-07 22:05:04,104 - __main__ - INFO - SVM -> Top 10 features (coef_):
-2025-01-07 22:05:04,104 - __main__ - INFO -   SrcBytes: 1.8762
-2025-01-07 22:05:04,104 - __main__ - INFO -   TotPkts: -1.7980
-2025-01-07 22:05:04,104 - __main__ - INFO -   BytePktRatio: 1.5573
-2025-01-07 22:05:04,104 - __main__ - INFO -   TotBytes: -1.3087
-2025-01-07 22:05:04,104 - __main__ - INFO -   SrcAddrEntropy: 1.2551
-2025-01-07 22:05:04,104 - __main__ - INFO -   Proto: 0.4581
-2025-01-07 22:05:04,104 - __main__ - INFO -   State: 0.4023
-2025-01-07 22:05:04,104 - __main__ - INFO -   DportRange: -0.3845
-2025-01-07 22:05:04,104 - __main__ - INFO -   Dur: -0.1426
-2025-01-07 22:05:04,104 - __main__ - INFO -   BytesPerSecond: -0.1422
-2025-01-07 22:05:04,190 - __main__ - INFO - S5 - Precision-Recall curve saved to plots/S5_pr_curve_SVM.png
-2025-01-07 22:05:04,327 - __main__ - INFO - S5 - Gains chart saved to plots/S5_gains_SVM.png
-2025-01-07 22:05:04,472 - __main__ - INFO - S5 - Calibration curve saved to plots/S5_calibration_SVM.png
-2025-01-07 22:05:04,628 - __main__ - INFO - S5 - ROC curve saved to plots/S5_roc_SVM.png
-2025-01-07 22:05:04,747 - __main__ - INFO - S5 - Confusion matrix saved to plots/S5_confusion_matrix_SVM.png
-2025-01-07 22:05:04,903 - __main__ - INFO - S5 - Top 10 features bar chart saved to plots/S5_top10_features_SVM.png
-2025-01-07 22:05:04,943 - __main__ - INFO - 
-2025-01-07 22:05:04,943 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:04,943 - __main__ - INFO - FINISHED MODEL: SVM
-2025-01-07 22:05:04,943 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:04,943 - __main__ - INFO - Starting GridSearch for LogisticRegression...
-2025-01-07 22:05:04,943 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:04,943 - __main__ - INFO - STARTING MODEL: LogisticRegression (GridSearchCV)
-2025-01-07 22:05:04,943 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:04,943 - __main__ - INFO - Fitting LogisticRegression model with GridSearchCV...
-2025-01-07 22:05:05,700 - __main__ - INFO - LogisticRegression -> Training time: 0.76 seconds
-2025-01-07 22:05:05,721 - __main__ - INFO - 
-2025-01-07 22:05:05,722 - __main__ - INFO - Classification Report for LogisticRegression:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00       544
-           1       1.00      1.00      1.00      1633
-
-    accuracy                           1.00      2177
-   macro avg       1.00      1.00      1.00      2177
-weighted avg       1.00      1.00      1.00      2177
-
-2025-01-07 22:05:05,722 - __main__ - INFO - LogisticRegression -> Best Params: {'clf__C': 10, 'clf__penalty': 'l1'}
-2025-01-07 22:05:05,722 - __main__ - INFO - LogisticRegression -> Best CV Score (F1): 0.9985
-2025-01-07 22:05:05,722 - __main__ - INFO - LogisticRegression -> Test Accuracy: 0.9986
-2025-01-07 22:05:05,722 - __main__ - INFO - LogisticRegression -> Test Precision: 0.9994
-2025-01-07 22:05:05,722 - __main__ - INFO - LogisticRegression -> Test Recall: 0.9988
-2025-01-07 22:05:05,722 - __main__ - INFO - LogisticRegression -> Test F1 Score: 0.9991
-2025-01-07 22:05:05,722 - __main__ - INFO - LogisticRegression -> Test ROC AUC: 0.9999
-2025-01-07 22:05:05,722 - __main__ - INFO - 
-2025-01-07 22:05:05,722 - __main__ - INFO - LogisticRegression -> Top 10 features (coef_):
-2025-01-07 22:05:05,722 - __main__ - INFO -   SrcBytes: 15.6958
-2025-01-07 22:05:05,722 - __main__ - INFO -   TotBytes: -13.3892
-2025-01-07 22:05:05,722 - __main__ - INFO -   TotPkts: -12.5132
-2025-01-07 22:05:05,722 - __main__ - INFO -   BytePktRatio: 9.2006
-2025-01-07 22:05:05,722 - __main__ - INFO -   State: 2.9002
-2025-01-07 22:05:05,722 - __main__ - INFO -   Proto: 2.2733
-2025-01-07 22:05:05,722 - __main__ - INFO -   SrcAddrEntropy: 1.6691
-2025-01-07 22:05:05,722 - __main__ - INFO -   Dir: 0.7711
-2025-01-07 22:05:05,722 - __main__ - INFO -   BytesPerSecond: -0.7280
-2025-01-07 22:05:05,723 - __main__ - INFO -   PktsPerSecond: 0.4796
-2025-01-07 22:05:05,830 - __main__ - INFO - S5 - Precision-Recall curve saved to plots/S5_pr_curve_LogisticRegression.png
-2025-01-07 22:05:06,020 - __main__ - INFO - S5 - Gains chart saved to plots/S5_gains_LogisticRegression.png
-2025-01-07 22:05:06,170 - __main__ - INFO - S5 - Calibration curve saved to plots/S5_calibration_LogisticRegression.png
-2025-01-07 22:05:06,327 - __main__ - INFO - S5 - ROC curve saved to plots/S5_roc_LogisticRegression.png
-2025-01-07 22:05:06,448 - __main__ - INFO - S5 - Confusion matrix saved to plots/S5_confusion_matrix_LogisticRegression.png
-2025-01-07 22:05:06,602 - __main__ - INFO - S5 - Top 10 features bar chart saved to plots/S5_top10_features_LogisticRegression.png
-2025-01-07 22:05:06,643 - __main__ - INFO - 
-2025-01-07 22:05:06,643 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:06,643 - __main__ - INFO - FINISHED MODEL: LogisticRegression
-2025-01-07 22:05:06,643 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:06,643 - __main__ - INFO - Starting GridSearch for GradientBoosting...
-2025-01-07 22:05:06,643 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:06,643 - __main__ - INFO - STARTING MODEL: GradientBoosting (GridSearchCV)
-2025-01-07 22:05:06,643 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:06,643 - __main__ - INFO - Fitting GradientBoosting model with GridSearchCV...
-2025-01-07 22:05:07,893 - __main__ - INFO - GradientBoosting -> Training time: 1.25 seconds
-2025-01-07 22:05:07,902 - __main__ - INFO - 
-2025-01-07 22:05:07,902 - __main__ - INFO - Classification Report for GradientBoosting:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00       544
-           1       1.00      1.00      1.00      1633
-
-    accuracy                           1.00      2177
-   macro avg       1.00      1.00      1.00      2177
-weighted avg       1.00      1.00      1.00      2177
-
-2025-01-07 22:05:07,902 - __main__ - INFO - GradientBoosting -> Best Params: {'clf__learning_rate': 0.1, 'clf__max_depth': 3, 'clf__n_estimators': 100}
-2025-01-07 22:05:07,902 - __main__ - INFO - GradientBoosting -> Best CV Score (F1): 0.9992
-2025-01-07 22:05:07,902 - __main__ - INFO - GradientBoosting -> Test Accuracy: 0.9986
-2025-01-07 22:05:07,902 - __main__ - INFO - GradientBoosting -> Test Precision: 0.9988
-2025-01-07 22:05:07,902 - __main__ - INFO - GradientBoosting -> Test Recall: 0.9994
-2025-01-07 22:05:07,902 - __main__ - INFO - GradientBoosting -> Test F1 Score: 0.9991
-2025-01-07 22:05:07,902 - __main__ - INFO - GradientBoosting -> Test ROC AUC: 1.0000
-2025-01-07 22:05:07,902 - __main__ - INFO - 
-2025-01-07 22:05:07,902 - __main__ - INFO - GradientBoosting -> Top 10 features (feature_importances_):
-2025-01-07 22:05:07,902 - __main__ - INFO -   BytePktRatio: 0.9908
-2025-01-07 22:05:07,902 - __main__ - INFO -   SrcAddrEntropy: 0.0026
-2025-01-07 22:05:07,902 - __main__ - INFO -   SrcBytes: 0.0019
-2025-01-07 22:05:07,902 - __main__ - INFO -   DstAddrEntropy: 0.0015
-2025-01-07 22:05:07,902 - __main__ - INFO -   TotBytes: 0.0014
-2025-01-07 22:05:07,903 - __main__ - INFO -   SportRange: 0.0007
-2025-01-07 22:05:07,903 - __main__ - INFO -   BytesPerSecond: 0.0004
-2025-01-07 22:05:07,903 - __main__ - INFO -   DportRange: 0.0003
-2025-01-07 22:05:07,903 - __main__ - INFO -   PktsPerSecond: 0.0002
-2025-01-07 22:05:07,903 - __main__ - INFO -   Dir: 0.0001
-2025-01-07 22:05:07,992 - __main__ - INFO - S5 - Precision-Recall curve saved to plots/S5_pr_curve_GradientBoosting.png
-2025-01-07 22:05:08,132 - __main__ - INFO - S5 - Gains chart saved to plots/S5_gains_GradientBoosting.png
-2025-01-07 22:05:08,279 - __main__ - INFO - S5 - Calibration curve saved to plots/S5_calibration_GradientBoosting.png
-2025-01-07 22:05:08,432 - __main__ - INFO - S5 - ROC curve saved to plots/S5_roc_GradientBoosting.png
-2025-01-07 22:05:08,551 - __main__ - INFO - S5 - Confusion matrix saved to plots/S5_confusion_matrix_GradientBoosting.png
-2025-01-07 22:05:08,697 - __main__ - INFO - S5 - Top 10 features bar chart saved to plots/S5_top10_features_GradientBoosting.png
-2025-01-07 22:05:08,734 - __main__ - INFO - 
-2025-01-07 22:05:08,734 - __main__ - INFO - 
-------------------------------------------------------------
-2025-01-07 22:05:08,734 - __main__ - INFO - FINISHED MODEL: GradientBoosting
-2025-01-07 22:05:08,734 - __main__ - INFO - ------------------------------------------------------------
-
-2025-01-07 22:05:08,734 - __main__ - INFO - All GridSearches complete. Summary of results:
-2025-01-07 22:05:08,734 - __main__ - INFO - 
-**Section 5 Results**
-
-**Model: RandomForest**
-
-| Metric               | Value |
-|----------------------|-------|
-| Best Params          | {'clf__max_depth': 10, 'clf__min_samples_leaf': 1, 'clf__min_samples_split': 5, 'clf__n_estimators': 50} |
-| Train Time (s)       | 2.17 |
-| CV F1                | 0.9990 |
-| Test Accuracy        | 0.9986 |
-| Test Precision       | 0.9988 |
-| Test Recall          | 0.9994 |
-| Test F1              | 0.9991 |
-| Specificity          | 0.9963 |
-| Test ROC AUC         | 0.999993245920536 |
-| Log Loss             | 0.0024482443266131294 |
-| mAP                  | 0.9999977513952596 |
-| Confusion Matrix     | <br>[[ 542    2]<br> [   1 1632]]<br> |
-
-**Model: DecisionTree**
-
-| Metric               | Value |
-|----------------------|-------|
-| Best Params          | {'clf__max_depth': 10, 'clf__min_samples_leaf': 1, 'clf__min_samples_split': 2} |
-| Train Time (s)       | 0.10 |
-| CV F1                | 0.9987 |
-| Test Accuracy        | 0.9995 |
-| Test Precision       | 0.9994 |
-| Test Recall          | 1.0000 |
-| Test F1              | 0.9997 |
-| Specificity          | 0.9982 |
-| Test ROC AUC         | 0.9990808823529412 |
-| Log Loss             | 0.01655657022926855 |
-| mAP                  | 0.9993880048959608 |
-| Confusion Matrix     | <br>[[ 543    1]<br> [   0 1633]]<br> |
-
-**Model: NaiveBayes**
-
-| Metric               | Value |
-|----------------------|-------|
-| Best Params          | {'clf__var_smoothing': 1e-09} |
-| Train Time (s)       | 0.04 |
-| CV F1                | 0.9985 |
-| Test Accuracy        | 0.9986 |
-| Test Precision       | 1.0000 |
-| Test Recall          | 0.9982 |
-| Test F1              | 0.9991 |
-| Specificity          | 1.0000 |
-| Test ROC AUC         | 0.9985709493534094 |
-| Log Loss             | 0.04966971068780521 |
-| mAP                  | 0.9996089904875721 |
-| Confusion Matrix     | <br>[[ 544    0]<br> [   3 1630]]<br> |
-
-**Model: KNN**
-
-| Metric               | Value |
-|----------------------|-------|
-| Best Params          | {'clf__n_neighbors': 5, 'clf__weights': 'distance'} |
-| Train Time (s)       | 0.20 |
-| CV F1                | 0.9989 |
-| Test Accuracy        | 0.9991 |
-| Test Precision       | 1.0000 |
-| Test Recall          | 0.9988 |
-| Test F1              | 0.9994 |
-| Specificity          | 1.0000 |
-| Test ROC AUC         | 1.0 |
-| Log Loss             | 0.0015568573678530948 |
-| mAP                  | 1.0 |
-| Confusion Matrix     | <br>[[ 544    0]<br> [   2 1631]]<br> |
-
-**Model: SVM**
-
-| Metric               | Value |
-|----------------------|-------|
-| Best Params          | {'clf__C': 10.0, 'clf__kernel': 'linear'} |
-| Train Time (s)       | 0.89 |
-| CV F1                | 0.9991 |
-| Test Accuracy        | 0.9991 |
-| Test Precision       | 1.0000 |
-| Test Recall          | 0.9988 |
-| Test F1              | 0.9994 |
-| Specificity          | 1.0000 |
-| Test ROC AUC         | 0.9989204729656713 |
-| Log Loss             | 0.009743268595384358 |
-| mAP                  | 0.999721946823078 |
-| Confusion Matrix     | <br>[[ 544    0]<br> [   2 1631]]<br> |
-
-**Model: LogisticRegression**
-
-| Metric               | Value |
-|----------------------|-------|
-| Best Params          | {'clf__C': 10, 'clf__penalty': 'l1'} |
-| Train Time (s)       | 0.76 |
-| CV F1                | 0.9985 |
-| Test Accuracy        | 0.9986 |
-| Test Precision       | 0.9994 |
-| Test Recall          | 0.9988 |
-| Test F1              | 0.9991 |
-| Specificity          | 0.9982 |
-| Test ROC AUC         | 0.999929082165628 |
-| Log Loss             | 0.005860661323851664 |
-| mAP                  | 0.9999768565079973 |
-| Confusion Matrix     | <br>[[ 543    1]<br> [   2 1631]]<br> |
-
-**Model: GradientBoosting**
-
-| Metric               | Value |
-|----------------------|-------|
-| Best Params          | {'clf__learning_rate': 0.1, 'clf__max_depth': 3, 'clf__n_estimators': 100} |
-| Train Time (s)       | 1.25 |
-| CV F1                | 0.9992 |
-| Test Accuracy        | 0.9986 |
-| Test Precision       | 0.9988 |
-| Test Recall          | 0.9994 |
-| Test F1              | 0.9991 |
-| Specificity          | 0.9963 |
-| Test ROC AUC         | 0.9999954972803574 |
-| Log Loss             | 0.002980920847000753 |
-| mAP                  | 0.9999985013889784 |
-| Confusion Matrix     | <br>[[ 542    2]<br> [   1 1632]]<br> |
-
-2025-01-07 22:05:08,746 - __main__ - INFO - SECTION 6: MODEL COMPARISON
-2025-01-07 22:05:08,748 - __main__ - INFO - 
-Evaluation of Model Metrics:
-
-2025-01-07 22:05:08,748 - __main__ - INFO - 
-| Model              | best_params                                                                                              |   train_time_sec |    cv_f1 |   test_accuracy |   test_precision |   test_recall |   test_f1 |   specificity |   test_roc_auc |   log_loss |      mAP | confusion_matrix   |
-|:-------------------|:---------------------------------------------------------------------------------------------------------|-----------------:|---------:|----------------:|-----------------:|--------------:|----------:|--------------:|---------------:|-----------:|---------:|:-------------------|
-| RandomForest       | {'clf__max_depth': 10, 'clf__min_samples_leaf': 1, 'clf__min_samples_split': 5, 'clf__n_estimators': 50} |        2.17299   | 0.999004 |        0.998622 |         0.998776 |      0.999388 |  0.999082 |      0.996324 |       0.999993 | 0.00244824 | 0.999998 | [[ 542    2]       |
-|                    |                                                                                                          |                  |          |                 |                  |               |           |               |                |            |          |  [   1 1632]]      |
-| DecisionTree       | {'clf__max_depth': 10, 'clf__min_samples_leaf': 1, 'clf__min_samples_split': 2}                          |        0.0989614 | 0.998699 |        0.999541 |         0.999388 |      1        |  0.999694 |      0.998162 |       0.999081 | 0.0165566  | 0.999388 | [[ 543    1]       |
-|                    |                                                                                                          |                  |          |                 |                  |               |           |               |                |            |          |  [   0 1633]]      |
-| NaiveBayes         | {'clf__var_smoothing': 1e-09}                                                                            |        0.039974  | 0.998543 |        0.998622 |         1        |      0.998163 |  0.999081 |      1        |       0.998571 | 0.0496697  | 0.999609 | [[ 544    0]       |
-|                    |                                                                                                          |                  |          |                 |                  |               |           |               |                |            |          |  [   3 1630]]      |
-| KNN                | {'clf__n_neighbors': 5, 'clf__weights': 'distance'}                                                      |        0.200364  | 0.99885  |        0.999081 |         1        |      0.998775 |  0.999387 |      1        |       1        | 0.00155686 | 1        | [[ 544    0]       |
-|                    |                                                                                                          |                  |          |                 |                  |               |           |               |                |            |          |  [   2 1631]]      |
-| SVM                | {'clf__C': 10.0, 'clf__kernel': 'linear'}                                                                |        0.890213  | 0.999081 |        0.999081 |         1        |      0.998775 |  0.999387 |      1        |       0.99892  | 0.00974327 | 0.999722 | [[ 544    0]       |
-|                    |                                                                                                          |                  |          |                 |                  |               |           |               |                |            |          |  [   2 1631]]      |
-| LogisticRegression | {'clf__C': 10, 'clf__penalty': 'l1'}                                                                     |        0.757149  | 0.998544 |        0.998622 |         0.999387 |      0.998775 |  0.999081 |      0.998162 |       0.999929 | 0.00586066 | 0.999977 | [[ 543    1]       |
-|                    |                                                                                                          |                  |          |                 |                  |               |           |               |                |            |          |  [   2 1631]]      |
-| GradientBoosting   | {'clf__learning_rate': 0.1, 'clf__max_depth': 3, 'clf__n_estimators': 100}                               |        1.2492    | 0.999234 |        0.998622 |         0.998776 |      0.999388 |  0.999082 |      0.996324 |       0.999995 | 0.00298092 | 0.999999 | [[ 542    2]       |
-|                    |                                                                                                          |                  |          |                 |                  |               |           |               |                |            |          |  [   1 1632]]      |
-2025-01-07 22:05:09,006 - __main__ - INFO - S6 - Scaled metric line chart saved to plots/S6_model_metrics_scaled_line.png
-2025-01-07 22:05:09,070 - __main__ - INFO - Creating individual plots for each model (omitting zero metrics)...
-2025-01-07 22:05:09,229 - __main__ - INFO - S6 - RandomForest non-zero metrics chart saved to plots/S6_RandomForest_metrics_nonzero.png
-2025-01-07 22:05:09,429 - __main__ - INFO - S6 - DecisionTree non-zero metrics chart saved to plots/S6_DecisionTree_metrics_nonzero.png
-2025-01-07 22:05:09,595 - __main__ - INFO - S6 - NaiveBayes non-zero metrics chart saved to plots/S6_NaiveBayes_metrics_nonzero.png
-2025-01-07 22:05:09,773 - __main__ - INFO - S6 - KNN non-zero metrics chart saved to plots/S6_KNN_metrics_nonzero.png
-2025-01-07 22:05:09,965 - __main__ - INFO - S6 - SVM non-zero metrics chart saved to plots/S6_SVM_metrics_nonzero.png
-2025-01-07 22:05:10,173 - __main__ - INFO - S6 - LogisticRegression non-zero metrics chart saved to plots/S6_LogisticRegression_metrics_nonzero.png
-2025-01-07 22:05:10,367 - __main__ - INFO - S6 - GradientBoosting non-zero metrics chart saved to plots/S6_GradientBoosting_metrics_nonzero.png
-2025-01-07 22:05:10,409 - __main__ - INFO - SECTION 6 MODEL EVALUATIONS COMPLETE.
-
-2025-01-07 22:05:10,503 - __main__ - INFO - 
-
-SECTION 7: EVALUATE KNN ON MULTIPLE DATASETS
-
-2025-01-07 22:05:10,506 - __main__ - INFO - Loading dataset from: data/1-Neris-20110810.binetflow.csv
-2025-01-07 22:05:13,150 - __main__ - INFO - Dataset loaded successfully. Shape: (2824636, 15)
-2025-01-07 22:05:14,108 - __main__ - INFO - Processed dataset shape: (71348, 6)
-2025-01-07 22:05:14,208 - __main__ - INFO - 
-File: 1-Neris-20110810.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.93      0.92      0.92      6078
-           1       0.94      0.95      0.94      8192
-
-    accuracy                           0.94     14270
-   macro avg       0.93      0.93      0.93     14270
-weighted avg       0.94      0.94      0.94     14270
-
-2025-01-07 22:05:14,209 - __main__ - INFO - Loading dataset from: data/2-Neris-20110811.binetflow.csv
-2025-01-07 22:05:15,865 - __main__ - INFO - Dataset loaded successfully. Shape: (1808122, 15)
-2025-01-07 22:05:16,364 - __main__ - INFO - Processed dataset shape: (30061, 6)
-2025-01-07 22:05:16,407 - __main__ - INFO - 
-File: 2-Neris-20110811.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.96      0.96      0.96      1824
-           1       0.98      0.98      0.98      4189
-
-    accuracy                           0.98      6013
-   macro avg       0.97      0.97      0.97      6013
-weighted avg       0.98      0.98      0.98      6013
-
-2025-01-07 22:05:16,407 - __main__ - INFO - Loading dataset from: data/3-Rbot-20110812.binetflow.csv
-2025-01-07 22:05:20,502 - __main__ - INFO - Dataset loaded successfully. Shape: (4710638, 15)
-2025-01-07 22:05:22,311 - __main__ - INFO - Processed dataset shape: (143709, 6)
-2025-01-07 22:05:22,602 - __main__ - INFO - 
-File: 3-Rbot-20110812.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00     23378
-           1       1.00      1.00      1.00      5364
-
-    accuracy                           1.00     28742
-   macro avg       1.00      1.00      1.00     28742
-weighted avg       1.00      1.00      1.00     28742
-
-2025-01-07 22:05:22,602 - __main__ - INFO - Loading dataset from: data/4-Rbot-20110815.binetflow.csv
-2025-01-07 22:05:23,600 - __main__ - INFO - Dataset loaded successfully. Shape: (1121076, 15)
-2025-01-07 22:05:23,988 - __main__ - INFO - Processed dataset shape: (27848, 6)
-2025-01-07 22:05:24,030 - __main__ - INFO - 
-File: 4-Rbot-20110815.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00      5054
-           1       0.99      0.99      0.99       516
-
-    accuracy                           1.00      5570
-   macro avg       0.99      0.99      0.99      5570
-weighted avg       1.00      1.00      1.00      5570
-
-2025-01-07 22:05:24,031 - __main__ - INFO - Loading dataset from: data/5-Virut-20110815-2.binetflow.csv
-2025-01-07 22:05:24,159 - __main__ - INFO - Dataset loaded successfully. Shape: (129832, 15)
-2025-01-07 22:05:24,227 - __main__ - INFO - Processed dataset shape: (5580, 6)
-2025-01-07 22:05:24,240 - __main__ - INFO - 
-File: 5-Virut-20110815-2.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.98      0.98      0.98       936
-           1       0.89      0.88      0.89       180
-
-    accuracy                           0.96      1116
-   macro avg       0.93      0.93      0.93      1116
-weighted avg       0.96      0.96      0.96      1116
-
-2025-01-07 22:05:24,240 - __main__ - INFO - Loading dataset from: data/6-Menti-20110816.binetflow.csv
-2025-01-07 22:05:24,726 - __main__ - INFO - Dataset loaded successfully. Shape: (558919, 15)
-2025-01-07 22:05:24,913 - __main__ - INFO - Processed dataset shape: (12124, 6)
-2025-01-07 22:05:24,941 - __main__ - INFO - 
-File: 6-Menti-20110816.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00      1499
-           1       0.99      1.00      1.00       926
-
-    accuracy                           1.00      2425
-   macro avg       1.00      1.00      1.00      2425
-weighted avg       1.00      1.00      1.00      2425
-
-2025-01-07 22:05:24,941 - __main__ - INFO - Loading dataset from: data/7-Sogou-20110816-2.binetflow.csv
-2025-01-07 22:05:25,059 - __main__ - INFO - Dataset loaded successfully. Shape: (114077, 15)
-2025-01-07 22:05:25,096 - __main__ - INFO - Processed dataset shape: (1740, 6)
-2025-01-07 22:05:25,106 - __main__ - INFO - 
-File: 7-Sogou-20110816-2.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.98      0.99      0.98       335
-           1       0.58      0.54      0.56        13
-
-    accuracy                           0.97       348
-   macro avg       0.78      0.76      0.77       348
-weighted avg       0.97      0.97      0.97       348
-
-2025-01-07 22:05:25,106 - __main__ - INFO - Loading dataset from: data/8-Murlo-20110816-3.binetflow.csv
-2025-01-07 22:05:27,669 - __main__ - INFO - Dataset loaded successfully. Shape: (2954230, 15)
-2025-01-07 22:05:28,719 - __main__ - INFO - Processed dataset shape: (78949, 6)
-2025-01-07 22:05:28,857 - __main__ - INFO - 
-File: 8-Murlo-20110816-3.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00     14565
-           1       0.99      0.97      0.98      1225
-
-    accuracy                           1.00     15790
-   macro avg       0.99      0.99      0.99     15790
-weighted avg       1.00      1.00      1.00     15790
-
-2025-01-07 22:05:28,857 - __main__ - INFO - Loading dataset from: data/9-Neris-20110817.binetflow.csv
-2025-01-07 22:05:30,706 - __main__ - INFO - Dataset loaded successfully. Shape: (2087508, 15)
-2025-01-07 22:05:32,593 - __main__ - INFO - Processed dataset shape: (214954, 6)
-2025-01-07 22:05:33,614 - __main__ - INFO - 
-File: 9-Neris-20110817.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.79      0.73      0.76      5993
-           1       0.96      0.97      0.96     36998
-
-    accuracy                           0.93     42991
-   macro avg       0.87      0.85      0.86     42991
-weighted avg       0.93      0.93      0.93     42991
-
-2025-01-07 22:05:33,615 - __main__ - INFO - Loading dataset from: data/10-Rbot-20110818.binetflow.csv
-2025-01-07 22:05:35,146 - __main__ - INFO - Dataset loaded successfully. Shape: (1309791, 15)
-2025-01-07 22:05:36,232 - __main__ - INFO - Processed dataset shape: (122199, 6)
-2025-01-07 22:05:46,116 - __main__ - INFO - 
-File: 10-Rbot-20110818.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.99      1.00      0.99      3169
-           1       1.00      1.00      1.00     21271
-
-    accuracy                           1.00     24440
-   macro avg       1.00      1.00      1.00     24440
-weighted avg       1.00      1.00      1.00     24440
-
-2025-01-07 22:05:46,116 - __main__ - INFO - Loading dataset from: data/11-Rbot-20110818-2.binetflow.csv
-2025-01-07 22:05:46,217 - __main__ - INFO - Dataset loaded successfully. Shape: (107251, 15)
-2025-01-07 22:05:46,311 - __main__ - INFO - Processed dataset shape: (10882, 6)
-2025-01-07 22:05:46,393 - __main__ - INFO - 
-File: 11-Rbot-20110818-2.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00       544
-           1       1.00      1.00      1.00      1633
-
-    accuracy                           1.00      2177
-   macro avg       1.00      1.00      1.00      2177
-weighted avg       1.00      1.00      1.00      2177
-
-2025-01-07 22:05:46,393 - __main__ - INFO - Loading dataset from: data/12-NsisAy-20110819.binetflow.csv
-2025-01-07 22:05:46,680 - __main__ - INFO - Dataset loaded successfully. Shape: (325471, 15)
-2025-01-07 22:05:46,806 - __main__ - INFO - Processed dataset shape: (9796, 6)
-2025-01-07 22:05:46,822 - __main__ - INFO - 
-File: 12-NsisAy-20110819.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.96      0.96      0.96      1526
-           1       0.86      0.87      0.86       434
-
-    accuracy                           0.94      1960
-   macro avg       0.91      0.91      0.91      1960
-weighted avg       0.94      0.94      0.94      1960
-
-2025-01-07 22:05:46,822 - __main__ - INFO - Loading dataset from: data/13-Virut-20110815-3.binetflow.csv
-2025-01-07 22:05:48,483 - __main__ - INFO - Dataset loaded successfully. Shape: (1925149, 15)
-2025-01-07 22:05:49,326 - __main__ - INFO - Processed dataset shape: (71942, 6)
-2025-01-07 22:05:49,463 - __main__ - INFO - 
-File: 13-Virut-20110815-3.binetflow.csv
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.96      0.96      0.96      6388
-           1       0.97      0.97      0.97      8001
-
-    accuracy                           0.96     14389
-   macro avg       0.96      0.96      0.96     14389
-weighted avg       0.96      0.96      0.96     14389
-
-2025-01-07 22:05:49,464 - __main__ - INFO - 
-KNN Evaluation Results Across Multiple Datasets:
-
-2025-01-07 22:05:49,464 - __main__ - INFO - 
-| Dataset                           |   TrainTimeSec |   Accuracy |   Precision |   Recall |       F1 |   Specificity |    LogLoss |      mAP |   ROC_AUC | ConfusionMatrix                |
-|:----------------------------------|---------------:|-----------:|------------:|---------:|---------:|--------------:|-----------:|---------:|----------:|:-------------------------------|
-| 1-Neris-20110810.binetflow.csv    |    0.0103641   |   0.935249 |    0.940912 | 0.946655 | 0.943775 |      0.919875 | 0.87461    | 0.964999 |  0.968247 | [[5591  487]  [ 437 7755]]     |
-| 2-Neris-20110811.binetflow.csv    |    0.0039742   |   0.978214 |    0.984479 | 0.984244 | 0.984362 |      0.964364 | 0.350479   | 0.991157 |  0.988242 | [[1759   65]  [  66 4123]]     |
-| 3-Rbot-20110812.binetflow.csv     |    0.0215409   |   0.999756 |    0.999627 | 0.999068 | 0.999347 |      0.999914 | 0.00401069 | 0.999545 |  0.99972  | [[23376     2]  [    5  5359]] |
-| 4-Rbot-20110815.binetflow.csv     |    0.00375819  |   0.997666 |    0.98646  | 0.988372 | 0.987415 |      0.998615 | 0.0428951  | 0.988886 |  0.995868 | [[5047    7]  [   6  510]]     |
-| 5-Virut-20110815-2.binetflow.csv  |    0.000807762 |   0.963262 |    0.892655 | 0.877778 | 0.885154 |      0.979701 | 0.599866   | 0.893462 |  0.957663 | [[917  19]  [ 22 158]]         |
-| 6-Menti-20110816.binetflow.csv    |    0.00166416  |   0.997526 |    0.994624 | 0.99892  | 0.996767 |      0.996664 | 0.0470625  | 0.997168 |  0.998784 | [[1494    5]  [   1  925]]     |
-| 7-Sogou-20110816-2.binetflow.csv  |    0.00106788  |   0.968391 |    0.583333 | 0.538462 | 0.56     |      0.985075 | 0.552591   | 0.519447 |  0.793915 | [[330   5]  [  6   7]]         |
-| 8-Murlo-20110816-3.binetflow.csv  |    0.0119052   |   0.996897 |    0.985149 | 0.974694 | 0.979893 |      0.998764 | 0.0580329  | 0.98127  |  0.991992 | [[14547    18]  [   31  1194]] |
-| 9-Neris-20110817.binetflow.csv    |    0.0359802   |   0.934475 |    0.956684 | 0.967674 | 0.962148 |      0.729518 | 1.01081    | 0.974744 |  0.914457 | [[ 4372  1621]  [ 1196 35802]] |
-| 10-Rbot-20110818.binetflow.csv    |    0.0145919   |   0.998527 |    0.99953  | 0.998778 | 0.999153 |      0.996844 | 0.0283294  | 0.999767 |  0.999159 | [[ 3159    10]  [   26 21245]] |
-| 11-Rbot-20110818-2.binetflow.csv  |    0.00120997  |   0.998622 |    0.998776 | 0.999388 | 0.999082 |      0.996324 | 0.0352745  | 0.999233 |  0.998767 | [[ 542    2]  [   1 1632]]     |
-| 12-NsisAy-20110819.binetflow.csv  |    0.00137305  |   0.939796 |    0.862385 | 0.866359 | 0.864368 |      0.960682 | 0.61845    | 0.919104 |  0.960737 | [[1466   60]  [  58  376]]     |
-| 13-Virut-20110815-3.binetflow.csv |    0.0102673   |   0.963792 |    0.965174 | 0.969879 | 0.967521 |      0.956168 | 0.502766   | 0.980711 |  0.984461 | [[6108  280]  [ 241 7760]]     |
-2025-01-07 22:05:49,464 - __main__ - INFO - 
-SECTION 7: MULTI-DATASET KNN EVALUATION COMPLETE.
-
+2026-01-31 00:03:29,425 - __main__ - INFO - Creating recommended additional visualizations for numeric vs. Botnet...
