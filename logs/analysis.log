@@ -353,3 +353,20 @@ SECTION 4: VISUALIZATIONS
 | max | 1748538.0116959063 |
 
 2026-01-31 00:03:29,425 - __main__ - INFO - Creating recommended additional visualizations for numeric vs. Botnet...
+2026-01-31 00:03:53,240 - __main__ - INFO - S4 - Pair plot with hue=Botnet saved to plots/S4_pairplot_numeric_botnet.png
+2026-01-31 00:03:59,352 - __main__ - INFO - S4 - Violin plot for BytesPerSecond saved to plots/S4_violinplot_bytespersec_botnet.png
+2026-01-31 00:03:59,400 - __main__ - INFO - SECTION 4 visualizations complete.
+
+2026-01-31 00:03:59,416 - __main__ - INFO - 
+
+SECTION 5: TRAIN-TEST SPLIT AND MULTI-MODEL PIPELINE
+
+2026-01-31 00:03:59,416 - __main__ - INFO - Splitting dataset into train and test sets...
+2026-01-31 00:03:59,420 - __main__ - INFO - Train set shape: (8705, 15), Test set shape: (2177, 15)
+2026-01-31 00:03:59,420 - __main__ - INFO - Ensuring all features are numeric by converting categorical columns to codes...
+2026-01-31 00:03:59,421 - __main__ - INFO - 
+------------------------------------------------------------
+2026-01-31 00:03:59,421 - __main__ - INFO - STARTING MODEL: RandomForest (GridSearchCV)
+2026-01-31 00:03:59,422 - __main__ - INFO - ------------------------------------------------------------
+
+2026-01-31 00:03:59,422 - __main__ - INFO - Fitting RandomForest model with GridSearchCV...
